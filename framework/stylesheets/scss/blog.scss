@@ -1,0 +1,151 @@
+/**
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * Blog Styles
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+@import "utilities/mixins";
+@import "utilities/config";
+@import "utilities/functions";
+@import "utilities/helpers";
+
+.content {
+  @include m(persona) {
+    @include rem('padding-top', 48px);
+    @include rem('padding-bottom', 48px);
+    border-top: 1px solid palette(grey, xx-light);
+    border-bottom: 1px solid palette(grey, xx-light);
+
+    @include m(header) {
+      @extend %center-align;
+    }
+
+    @include m(photo) {
+      @include rem('width', 90px);
+      @include rem('height', 90px);
+      @include border-radius(50%);
+    }
+
+    @include m(name) {
+      @include rem('font-size', 22px);
+      @include rem('padding-top', 6px);
+
+      display: block;
+      margin-top: 0;
+      color: $black;
+    }
+
+    @include m(desc) {
+      @include rem('padding-top', 4px);
+      @include rem('padding-bottom', 8px);
+
+      margin-top: 0;
+      color: palette(grey, light);
+      line-height: 1;
+    }
+
+    @include m(bio) {
+      @extend %align-left;
+      @include rem('font-size', 14px);
+      color: $black;
+    }
+
+    @include m(social) {
+      @include rem('margin-top', 8px);
+      text-align: center;
+
+      @include m(twitter) {
+        i {
+          color: map_get($ui-colors, info);
+        }
+      }
+    }
+  }
+}
+
+.blog {
+  @include e(hero) {
+    @include m(img) {
+      display: block;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+// ==========================================================================
+// Overrides
+// ==========================================================================
+.page-blog {
+  .blockquote {
+    @include m(styled) {
+      @include rem('font-size', 18px);
+      @include rem('padding', 48px);
+      position: relative;
+      font-style: italic;
+      font-weight: $font-weight--bold;
+      -webkit-font-smoothing: subpixel-antialiased;
+
+      @include p-el(before) {
+        @include rem('left', -24px);
+        @include rem('font-size', 96px);
+        top: 0;
+        color: palette(grey, xx-light);
+        font-style: italic;
+        content: '"';
+      }
+    }
+  }
+
+  .panel--isolate-min {
+    display: block;
+  }
+}
+
+.comment--author--section,
+.content--persona--social {
+  a {
+    color: map_get($ui-colors, info);
+
+    &:hover {
+      opacity: .85;
+    }
+
+    &:active {
+      opacity: initial;
+    }
+  }
+}
+
+// ==========================================================================
+// MEDIA QUERIES
+// ==========================================================================
+
+// SMALL
+@include media-q(small) {
+  // Cite
+  .page-blog {
+    cite {
+      @include rem('font-size', 14px);
+    }
+  }
+}
+
+// MEDIUM
+@include media-q(medium) {
+  .blog__hero--img {
+    width: 90%;
+  }
+  .content--persona--photo {
+    @include rem('width', 120px);
+    @include rem('height', 120px);
+  }
+
+  .content--persona--desc {
+    @include rem('font-size', 18px);
+    line-height: 1.5;
+  }
+}
+

@@ -1,0 +1,203 @@
+// ==========================================================================
+// Vendor Styles
+// ==========================================================================
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat, PlaceholderInExtend
+@import "utilities/mixins";
+@import "utilities/config";
+@import "utilities/functions";
+@import "utilities/helpers";
+
+.vend {
+  @include m(hero) {
+    @include img-replace('generic/comm.png', 100%, 100%);
+    @include background-size(cover);
+    @include rem('margin-bottom', 48px);
+    @include rem('padding', 24px 8px);
+
+    position: relative;
+    width: 100%;
+    color: $white;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  @include m(msg) {
+    @include rem('font-size', 18px);
+  }
+
+  @include e(benefit) {
+    @include rem('padding-left', 6px);
+    @include rem('padding-right', 6px);
+    @include rem('margin-top', 48px);
+
+    @include m(sect) {
+      @include rem('padding-left', 24px);
+      @include rem('padding-right', 24px);
+
+      margin-top: 0;
+    }
+
+    @include m(icn) {
+      @include border-radius(100%);
+      @include rem('width', 80px);
+      @include rem('height', 80px);
+      @include rem('font-size', 42px);
+      @include rem('line-height', 80px);
+      @include transition(all $trns-duration);
+
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      border: 1px solid palette(grey, x-light);
+      color: palette(grey, light);
+      font-style: normal;
+      text-align: center;
+
+      &:hover {
+        border-color: $black;
+        color: $black;
+      }
+    }
+
+    @include m(desc) {
+      display: inline-block;
+      margin-top: 0;
+      text-align: center;
+    }
+
+    @include m(caption) {
+      @include rem('padding-top', 12px);
+      @include rem('padding-bottom', 12px);
+      text-align: center;
+    }
+  }
+
+  @include e(item) {
+    @include rem('margin-top', 48px);
+    @include doubly('padding-left', 8px);
+    text-align: center;
+
+    @include m(num) {
+      font-style: normal;
+      font-weight: $font-weight--bold;
+    }
+
+    @include m(desc) {
+      margin-top: 0;
+    }
+
+    @include m(caption) {
+      @extend .vend__benefit--caption;
+    }
+
+  }
+
+  @include e(sect) {
+    margin-top: 0;
+  }
+
+  @include m(c2a) {
+    @include rem('margin-top', 16px);
+    @include rem('margin-bottom', 16px);
+    display: block;
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 1.5;
+    cursor: default;
+    pointer-events: none;
+
+    @include m(btn) {
+      cursor: pointer;
+      pointer-events: all;
+    }
+  }
+}
+
+// ==========================================================================
+// Miscellaneous and DRY
+// ==========================================================================
+
+// ==========================================================================
+// MEDIA QUERIES
+// ==========================================================================
+
+// SMALL
+@include media-q(small) {
+  // Vendor Benefit Icon  Hover
+  .vend__benefit--icn {
+    border: 1px solid transparent;
+    background-color: $black;
+    color: $white;
+
+    &:hover {
+      border-color: $black;
+      background-color: $white;
+      color: $black;
+    }
+  }
+}
+
+// MEDIUM
+@include media-q(medium) {
+  // Vendor Section
+  .vend__sect {
+    @include rem('margin-top', 48px);
+  }
+
+  // Vendor Hero
+  .vend--hero {
+    @include img-replace('generic/comm-2x.png', 100%, 100%);
+    @include background-size(cover);
+    @include rem('margin-bottom', 72px);
+    @include rem('padding-top', 36px);
+    @include rem('padding-left', 24px);
+    @include rem('padding-right', 24px);
+    @include rem('font-size', 60px);
+    line-height: 1;
+
+    &::after {
+      @include rem('bottom', -132px);
+    }
+  }
+
+  // Vendor Msg
+  .vend--msg {
+    @include rem('font-size', 60px);
+    line-height: 1;
+  }
+
+  // Vend Benefit
+  .vend__benefit {
+    padding: 0;
+
+    &:nth-child(odd) {
+      float: right;
+    }
+
+    &:nth-child(even) {
+      margin-left: 0;
+    }
+  }
+
+  // Vendor Benefit Caption
+  .vend__benefit--caption {
+    @include rem('min-width', 200px);
+  }
+
+  .page-vendor {
+    .row--alt {
+      @include rem('margin-top', 72px);
+    }
+
+    .table {
+      margin-top: 0;
+    }
+  }
+
+  // Vendor Call-to-Action
+  .vend--c2a {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,23 @@
+// 960 Grid System
+//@import "960/_reset";
+//@import "960/_960_16_col";
+// ==========================================================================
+// Grid Container
+// ==========================================================================
+
+.grid {
+  @extend %clearfix;
+  @extend .centered;
+  width: 90%;
+  //border: 1px solid map_get($ui-colors, default);
+
+  // Make nested grids 100% width
+  [class *= "grid__col--"] > & {
+    width: 100%;
+  }
+
+  // Set max-width for grid-container
+  @include media-q(large) {
+    max-width: $g-max-w;
+  }
+}

@@ -1,0 +1,139 @@
+/**
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * Extends for Modules
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+
+// Horizontal Navigation Style
+%nav-item-horz {
+  display: table-cell;
+  border-left: 7px solid transparent; // simulate margin left
+  border-radius: $br;
+
+  @include media-q(small) { // Mobile
+    display: block;
+    border-left: 0;
+    border-radius: 0;
+
+    &:last-child a {
+      border-bottom-color: transparent;
+    }
+  }
+}
+
+// Navigation Link Style
+%nav-item-link {
+  @include rem('font-size', 16px);
+  @include rem('padding', 3px);
+  display: block;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: $br;
+  font-weight: $font-weight--light;
+  text-align: center;
+  //text-transform: uppercase;
+
+  @include media-q(small) { // Mobile
+    //@include rem('font-size', 14px);
+    @include rem('padding-top', 18px);
+    @include rem('padding-bottom', 18px);
+
+    border-radius: 0; // remove border radius on mobile
+    border-bottom-color: palette(grey, light);
+  }
+}
+
+// Navigation Hover Style
+%nav-item-on {
+  @include media-q(small) {
+    background-color: palette(black, x-light);
+  }
+
+  background-color: $color-primary;
+  color: $white;
+
+  a {
+    color: $white;
+  }
+}
+
+// ==========================================================================
+// Headlines Placeholders
+// ==========================================================================
+
+// Headlines
+%hl-prim {
+  //@include rem('font-size', 48.84px);
+  //@include rem('font-size', 51.405px);
+  line-height: 1;
+  color: palette(black);
+  text-transform: uppercase;
+  font-family: $prim-heading-fallback;
+
+  .wf-active & { // when WebFont Loaded
+    @include rem('font-size', 68.54px);
+    font-family: $font-family--primary;
+
+    @include media-q(small) {
+      @include rem('font-size', 51.405px);
+    }
+  }
+
+  @include media-q(small) {
+    @include rem('font-size', 51.405px);
+  }
+}
+
+%hl-sec { //secondary headline style
+  font-family: $sec-heading-fallback;
+
+  .wf-active & { // when WebFont Loaded
+    font-family: $font-family--secondary;
+  }
+
+  @include rem('font-size', 24px);
+
+  color: palette(grey, light);
+  font-weight: $font-weight--medium;
+
+  @include media-q(small) { // Mobile
+    @include rem('font-size', 18px);
+  }
+}
+
+// UI
+%icn-ui {
+  line-height: 0;
+  cursor: pointer;
+}
+
+// Buttons
+%btn {
+  @include rem('padding', 16px 24px);
+  @include rem('font-size', 14px);
+  border: 0;
+  border-radius: $br;
+  color: $white;
+  outline: 0;
+  text-transform: uppercase;
+  transition: opacity $trns-duration;
+  cursor: pointer;
+
+  @include media-q(small) {
+    display: block;
+  }
+
+  &:hover {
+    opacity: .85;
+  }
+
+  &:active {
+    opacity: initial;
+  }
+}
+
+// ==========================================================================
+// MEDIA QUERIES
+// ==========================================================================

@@ -1,0 +1,16 @@
+// ==========================================================================
+// Active or Not Active Links
+// ==========================================================================
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+@import "../utilities/mixins";
+@import "../utilities/config";
+@import "../utilities/functions";
+@import "../utilities/helpers";
+
+.link {
+  @include m(disabled) {
+    pointer-events: none;
+    cursor: default;
+  }
+}

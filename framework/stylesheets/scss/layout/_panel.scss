@@ -1,0 +1,137 @@
+/**
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * Panel Styles
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+@import "../utilities/mixins";
+@import "../utilities/config";
+@import "../utilities/functions";
+@import "../utilities/helpers";
+@import "../layout/index";
+
+.panel {
+  @extend %panel-default;
+
+  @include e(split) {
+    margin-top: 0;
+
+    @include m(desc) {
+      @include rem('margin-bottom', 12px);
+    }
+
+    @include m(helper) {
+      @include rem('margin-bottom', 8px);
+      a {
+        display: inline-block;
+      }
+    }
+
+    .form__input {
+      width: 100%;
+    }
+  }
+
+  // panel centered
+  @include m(centered) {
+    @extend %panel-default;
+    @extend %center-align;
+  }
+
+  // panel padded centered {
+  @include m(padded) {
+    @extend %panel-padding;
+
+    @include m(centered) {
+      @extend %panel-padding;
+      @extend %center-align;
+    }
+  }
+
+  @include m(isolate-max) { // panel divide (border)
+    @include p-el(before) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      border-left: 1px solid palette(grey, xx-light);
+    }
+  }
+
+  @include m(isolate-min) {
+    @include rem('margin-bottom', 48px);
+    @include border-radius($br);
+    @include rem('padding', 8px);
+  }
+
+  @include m(isolate-micro) {
+    order: 2;
+  }
+}
+
+// ==========================================================================
+// MEDIA QUERIES
+// ==========================================================================
+
+// SMALL
+@include media-q(small) {
+  // Panel i-Max
+  .panel--isolate-max {
+    @include rem('margin-bottom', 60px);
+    order: 1;
+    margin-top: 0;
+
+    h3 {
+      @include rem('font-size', 19.5px);
+    }
+
+    .panel--centered {
+      @include rem('padding-bottom', 24px);
+      padding-top: 0;
+    }
+
+    .panel--padded {
+      @include rem('padding-top', 60px);
+    }
+  }
+
+  // Panel i-Min
+  .panel--isolate-min {
+    order: 3;
+    width: auto;
+    background-color: map_get($ui-colors, default);
+    text-align: center;
+
+    a,
+    i {
+      color: $white;
+    }
+
+    h3 {
+      @include rem('font-size', 19.5px);
+      font-weight: $font-weight--light;
+    }
+
+    ul {
+      display: none;
+    }
+  }
+}
+
+// MEDIUM
+@include media-q(medium) {
+  // Panel i-Max
+  .panel--isolate-max {
+    @include rem('padding-left', 36px);
+    position: relative;
+    margin-top: 0;
+  }
+
+  // Split Panel Info-text
+  .panel__split--helper {
+    a {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Data -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- HTML5Shiv -->
+    <!--[if lt IE 9]>
+    <script src="assets/javascript/html5shiv/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/css/styles.css">
+    <link rel="stylesheet" href="stylesheets/css/pserv.css">
+
+
+    <title>Knave GmBH | Products and Services</title>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="l__header--primary" id="top" role="banner">
+    <div class="grid">
+        <h1 class="logo"> <!-- takes 30%+ grid -->
+            <a class="" href="index.html" title="Knave Incorporated Home">Knave Inc.</a>
+        </h1><!-- end of logo -->
+        <!-- logo for mobile -->
+        <a class="site-logo" href="index.html">
+            <b class="v-hidden">
+                Knave &mdash; A Greyback Company.
+            </b>
+        </a><!-- end of mobile logo -->
+
+        <ul class="btn-dashboard">
+            <li>
+                <span class="">Dashboard</span><i class="fa fa-angle-down"></i>
+
+                <ul class="btn-dashboard--child">
+                    <li><a href="accountdir/sign_up.html">Sign Up</a></li>
+                    <li><a href="accountdir/login.html">Log In</a></li>
+                    <li><a href="accountdir/acct.html">Account</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+        <nav class="navbar" role="navigation">
+            <h3 class="v-hidden">Main Navigation</h3>
+            <!-- toggle for mobile -->
+            <span id="toggle" class="icn--nav-toggle is-displayed-mobile">
+                    <b class="v-hidden">Toggle</b>
+                </span><!-- end of toggle for mobile -->
+
+            <!-- Desktop Navigation -->
+            <ul class="nav is-collapsed-mobile">
+                <li class="nav__item">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav__item  nav__item--current">
+                    <a href="pserv.html">Products & Services</a>
+                </li>
+                <li class="nav__item">
+                    <a href="blog/blog.html">Blog</a>
+                </li>
+                <li class="nav__item">
+                    <a href="about.html">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav><!-- end of nav -->
+    </div>
+</header><!-- end of Header -->
+
+<!-- Simulate margin from sticky header -->
+<div class="l__header--primary--support--sec"></div>
+<!-- MAIN -->
+<section class="panel">
+    <h2 class="v-hidden" aria-label="Dual Tab Structure for Products and Services">Products and Services</h2>
+    <div id="tabs">
+        <ul class="grid tab__nav">
+            <li class="tab__item" role="tab">
+                <a href="#products" class="tab__item--title">Products</a></li>
+
+            <li class="tab__item" role="tab">
+                <a href="#services" class="tab__item--title">Services</a></li>
+        </ul>
+
+        <section id="products">
+            <div class="grid">
+                <h2 class="">Products</h2>
+                <p>Here, you will find products we only have in stock, along with audio devices from the featured
+                    section:</p>
+            </div>
+
+
+            <section class="grid sale__item">
+                <div class="grid__col--5">
+                    <img src="assets/images/prod-gallery/google-home.jpg" width="240"
+                         srcset="assets/images/prod-gallery/google-home-2.jpg 2x"
+                         alt="Google Home" class="sale__item--img">
+                </div>
+
+                <div class="grid__col--7">
+                    <div class="sale__item--content">
+                        <h3 class="sale__item--heading"><a href="https://madeby.google.com/home/" target="_blank">Google
+                            Home</a></h3>
+                        <p class="sale__item--desc">
+                            Google Home is a voice-activated speaker powered by the Google Assistant. Ask it questions.
+                            Tell it to do things. It’s your own Google, always ready to help. Just start with, "Ok
+                            Google".
+                        </p>
+                        <span class="sale__item--price">Price: GH¢399.00</span>
+
+                        <div class="sale__item--purch">
+                            <label for="purch_qty_1" class="form__label">Quantity</label>
+                            <select name="usr_purch_qty" id="purch_qty_1" aria-label="Quantity"
+                                    class="sale__item--select">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+
+                            <input type="submit" value="Purchase" class="btn--success btn--inline">
+                        </div>
+                    </div>
+
+
+                </div>
+            </section><!-- end of Sale Item 1 -->
+
+            <section class="grid sale__item">
+                <div class="grid__col--5">
+                    <img src="assets/images/prod-gallery/gradog5.jpg" width="240"
+                         srcset="assets/images/prod-gallery/gradog5-2.jpg 2x"
+                         alt="Grado GS1000e Headphones" class="sale__item--img">
+                </div>
+
+                <div class="grid__col--7">
+                    <div class="sale__item--content">
+                        <h3 class="sale__item--heading"><a href="http://bit.ly/2miVUT6" target="_blank">Grado GS1000e
+                            Headphones</a></h3>
+                        <p class="sale__item--desc">
+                            Grado GS1000e Headphones has excellent audio dynamics, smooth high ends and authentic bass.
+                            Heck, with these, you can probably just about make out the sound of wind brushing against
+                            the guitarist's stubble.
+                        </p>
+                        <span class="sale__item--price">Price: GH¢199.99</span>
+
+
+                        <div class="sale__item--purch">
+                            <label for="purch_qty_2" class="form__label">Quantity</label>
+                            <select name="usr_purch_qty" id="purch_qty_2" aria-label="Quantity"
+                                    class="sale__item--select">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+
+                            <input type="submit" value="Purchase" class="btn--success btn--inline">
+                        </div>
+                    </div>
+                </div>
+            </section><!-- end of Sale Item 2 -->
+
+
+            <section class="grid sale__item">
+                <div class="grid__col--5">
+                    <img src="assets/images/prod-gallery/iaudio.jpg" width="240"
+                         srcset="assets/images/prod-gallery/iaudio-2.jpg 2x"
+                         alt="iAudio E3 MP3 Player" class="sale__item--img">
+                </div>
+
+                <div class="grid__col--7">
+                    <div class="sale__item--content">
+                        <h3 class="sale__item--heading"><a href="http://bit.ly/2lD0GxE" target="_blank">iAudio E3 MP3
+                            Player</a></h3>
+                        <p class="sale__item--desc">
+                            iAudio is incredibly light, well-built and its 16GB of storage will see you through a short
+                            bike ride or even an ultramarathon.
+                        </p>
+                        <span class="sale__item--price">Price: GH¢79.00</span>
+
+                        <div class="sale__item--purch">
+                            <label for="purch_qty_3" class="form__label">Quantity</label>
+                            <select name="usr_purch_qty" id="purch_qty_3" aria-label="Quantity"
+                                    class="sale__item--select">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+
+                            <input type="submit" value="Purchase" class="btn--success btn--inline">
+                        </div>
+                    </div>
+                </div>
+            </section><!-- end of Sale Item 3 -->
+
+
+            <section class="grid sale__item">
+                <div class="grid__col--5">
+                    <img src="assets/images/prod-gallery/x5h.jpg" width="240"
+                         srcset="assets/images/prod-gallery/x5h-2.jpg 2x"
+                         alt="X5 High Resolution Music Player" class="sale__item--img">
+                </div>
+
+                <div class="grid__col--7">
+                    <div class="sale__item--content">
+                        <h3 class="sale__item--heading"><a href="http://amzn.to/2lIX6mi" target="_blank">X5 High
+                            Resolution Music Player</a></h3>
+                        <p class="sale__item--desc">
+                            To sort the six popular lossless audio formats, Fiio’s X5 player features a dual-core 600MHz
+                            CPU and wields two microSD slots for carrying up to 256GB of high-resolution tunes. And, as
+                            you might expect, the X5 has the proper outputs for using it alongside headphone amps and
+                            other audiophile gear.
+                        </p>
+                        <span class="sale__item--price">Price: GH¢209.00</span>
+
+                        <div class="sale__item--purch">
+                            <label for="purch_qty_4" class="form__label">Quantity</label>
+                            <select name="usr_purch_qty" id="purch_qty_4" aria-label="Quantity"
+                                    class="sale__item--select">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+
+
+                            <input type="submit" value="Purchase" class="btn--success btn--inline">
+                        </div>
+                    </div>
+                </div>
+            </section><!-- end of Sale Item 4 -->
+
+
+            <section class="grid sale__item">
+                <div class="grid__col--5">
+                    <img src="assets/images/prod-gallery/sms-sync.jpg" width="480"
+                         srcset="assets/images/prod-gallery/sms-sync-1.5.jpg 1.5x"
+                         alt="Sync SMS Audio" class="sale__item--img">
+                </div>
+
+                <div class="grid__col--7">
+                    <div class="sale__item--content">
+                        <h3 class="sale__item--heading"><a href="http://bit.ly/21kpHYW" target="_blank">Sync SMS
+                            Audio</a></h3>
+                        <p class="sale__item--desc">
+                            Headphones for athletes usually involve hooks or wings. These can be good, but SMS Audio
+                            provides another solution -- wireless on-ear Sync.
+                        </p>
+                        <span class="sale__item--price">Price: GH¢ 195.00</span>
+
+                        <div class="sale__item--purch">
+                            <label for="purch_qty_5" class="form__label">Quantity</label>
+                            <select name="usr_purch_qty" id="purch_qty_5" aria-label="Quantity"
+                                    class="sale__item--select">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+
+                            <input type="submit" value="Purchase" class="btn--success btn--inline">
+                        </div>
+                    </div>
+                </div>
+            </section><!-- end of Sale Item 5 -->
+
+        </section>
+        <section id="services">
+            <div class="grid">
+                <div class="styled__horz">
+                    <h2 class="">Services</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cumque, dolore esse excepturi,
+                        natus nihil quaerat quas quidem reprehenderit sed sint veniam voluptas. Alias aliquid atque ea
+                        eos maxime quia.</p>
+                </div>
+
+                <section class="node__item">
+                    <div class="panel--centered">
+                        <i class="fa fa-mixcloud fa-3x node__item--icn"></i>
+                        <h3 class="node__item--heading">Unlimited Sound Storage (Cloud)</h3>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad adipisci, animi, architecto
+                        asperiores atque commodi culpa dolore earum eius esse et exercitationem id illo impedit incidunt
+                        magnam minima modi, molestiae natus nihil nisi numquam quia quos repudiandae voluptatem
+                        voluptates. Consequatur eligendi iusto, laudantium modi pariatur quibusdam sint ut velit?</p>
+                </section>
+
+
+                <section class="node__item">
+                    <div class="panel--centered">
+                        <i class="fa fa-sliders fa-3x node__item--icn"></i>
+                        <h3 class="node__item--heading">Phenomenal Audio Tuning</h3>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi consequatur esse fuga
+                        fugit harum ipsa iure, maxime non, numquam, officiis reprehenderit rerum voluptatem voluptates
+                        voluptatum. Facere magnam qui quisquam quo quod repellat saepe?
+                        <br><br>
+                        Ad animi aut cupiditate delectus deserunt dolorem eaque eius enim et, excepturi exercitationem
+                        fuga iste libero minima nam, natus
+                        nulla optio placeat quaerat quas qui quia repellendus soluta veniam voluptates. Doloribus eius
+                        nisi non quos sequi!</p>
+                </section>
+
+
+                <section class="node__item">
+                    <div class="panel--centered">
+                        <i class="fa fa-simplybuilt fa-3x node__item--icn"></i>
+                        <h3 class="node__item--heading">Sound Recording & Professional Restoration</h3>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae consequuntur cumque eius
+                        eos fugit harum hic itaque labore laborum, minus mollitia, similique ut. Aperiam asperiores
+                        consequatur cum eius, ipsa modi nisi perferendis sit sunt tenetur, unde voluptate! Labore,
+                        maiores.</p>
+                </section>
+
+
+            </div>
+        </section>
+    </div><!-- TABS -->
+
+
+</section><!-- end of products section -->
+
+
+<!-- back to top -->
+<a href="#top">
+    <div class="return--up">Back to top
+    </div>
+</a>
+
+<!-- FOOTER -->
+<footer class="l-footer">
+    <div class="grid footer__prim">
+        <section class="footer__subscribe">
+            <h4 class="footer__subscribe--desc">Receive updates, newsletters & offers</h4>
+            <form action="">
+                <label for="sub_email" class="form__label--hidden">Email Address</label>
+                <input type="email" id="sub_email" name="usr_email" class="form__input" placeholder="E-mail Address">
+                <a href="#">
+                    <input type="submit" class="btn--info" value="Subscribe">
+                </a>
+            </form>
+        </section>
+
+        <section class="l-footer--social">
+            <h4 class="footer__subscribe--desc">Find Us On</h4>
+
+            <a href="#" class="l-footer--social--icn">
+                <i class="fa fa-facebook-square fa-3x"></i>
+            </a><!-- facebook -->
+            <a href="#" class="l-footer--social--icn">
+                <i class="fa fa-twitter-square fa-3x"></i>
+            </a><!-- twitter -->
+            <a href="#" class="l-footer--social--icn">
+                <i class="fa fa-google-plus-square fa-3x"></i>
+            </a><!-- google-plus -->
+        </section>
+
+        <section class="grid__col--4 footer__item">
+            <h4 class="footer__item--heading">Get to Know Us</h4>
+
+            <ul class="footer__item--list">
+                <li><a href="about.html">
+                    About Knave Inc.
+                </a>
+                </li>
+
+                <li><a href="contact.html">
+                    Contact Us
+                </a>
+                </li>
+            </ul>
+        </section><!-- end of footer item 1 -->
+
+
+        <section class="grid__col--4 footer__item">
+            <h4 class="footer__item--heading">Wanna Work?</h4>
+
+
+            <ul class="footer__item--list">
+                <li><a href="misc/vendors.html">Become a Knave Vendor</a>
+                </li>
+
+            </ul>
+        </section><!-- end of footer item 2 -->
+
+        <section class="grid__col--4 footer__item">
+            <h4 class="footer__item--heading">Account Services</h4>
+
+            <ul class="footer__item--list">
+                <li><a href="accountdir/acct.html">Your Account</a>
+                </li>
+
+                <li><a href="accountdir/trackr.html">Track an order</a>
+                </li>
+
+                <li><a href="accountdir/sign_up.html">Sign Up</a>
+                </li>
+            </ul>
+        </section><!-- end of footer item 3 -->
+    </div>
+
+
+    <div class="footer__sec">
+        <div class="grid">
+            <span class="footer__sec--lft">
+                <small class="footer__sec--1-content">&copy;2017 Knave Inc. GmBH, Accra.</small>
+            </span>
+
+            <span class="footer__sec--rt">
+                 <small class="footer__sec--2-content">A Greyback Company</small>
+            </span>
+        </div>
+
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+<script src="assets/javascript/jquery/jquery-ui/jquery-ui.min.js"></script>
+
+<!-- LoDash -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"
+        integrity="sha256-8E6QUcFg1KTnpEU8TFGhpTGHw5fJqB9vCms3OhAYLqw=" crossorigin="anonymous"></script>
+
+
+<!-- Default Scripts -->
+<script src="assets/javascript/scripts.js"></script>
+
+<!-- HTML5hiv -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"
+        integrity="sha256-1eSvllkLdrfxD6G8RGF9h+mQuD93Af5+GdPBMNc7uMQ=" crossorigin="anonymous"></script>
+
+<!-- FontAwesome -->
+<script src="https://use.fontawesome.com/3eec833028.js"></script>
+
+<!-- Web Font Loader -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"
+        integrity="sha256-FL2n/ULq4lZxp5qZGW6boR09sNrvvpsQhjsFxEmcfm8=" crossorigin="anonymous"></script>
+
+<script>
+    WebFontConfig = {
+        google: {
+            families: ['Assistant:200,300,400,600,700,800', 'Ubuntu']
+        },
+        timeout: 2400,
+        // other options and settings
+        active: function () {
+            sessionStorage.fonts = true;
+        }
+    };
+
+    (function (d) {
+        var wf = d.createElement('script'), s = d.scripts[0];
+        wf.src = "https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js";
+        s.parentNode.insertBefore(wf, s);
+    })(document);
+</script>
+</body>
+</html>

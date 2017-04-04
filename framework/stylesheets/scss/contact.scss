@@ -1,0 +1,56 @@
+// ==========================================================================
+// Contact Styles
+// ==========================================================================
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+@import "utilities/mixins";
+@import "utilities/config";
+@import "utilities/functions";
+@import "utilities/helpers";
+
+// ==========================================================================
+// UTILITIES
+// ==========================================================================
+
+// Overrides
+.page-contact {
+  .l-header {
+    margin-bottom: 0;
+  }
+
+  .grid__col--4.node__item {
+    float: left;
+  }
+
+  .node__item {
+    address {
+      font-style: normal;
+    }
+  }
+
+  .form {
+    background-color: transparent;
+  }
+
+  .form__textarea {
+    @include rem('margin-bottom', 4px);
+  }
+}
+
+// ==========================================================================
+// MEDIA QUERIES
+// ==========================================================================
+// LARGE
+
+@include media-q(large) {
+  .page-contact {
+    .form__input,
+    .form__textarea {
+      max-width: 55%;
+    }
+
+    .form__textarea--subtext {
+      padding-left: 0;
+    }
+  }
+}

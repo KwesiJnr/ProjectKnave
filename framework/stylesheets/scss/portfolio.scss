@@ -1,0 +1,120 @@
+/**
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * Portfolio Styles
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+@import "utilities/mixins";
+@import "utilities/config";
+@import "utilities/functions";
+@import "utilities/helpers";
+
+.port-product {
+  @include m(panel) {
+    @include rem('padding-right', 60px);
+    @include rem('padding-left', 60px);
+  }
+
+  @include m(display-box) { // space property
+    @include rem('width', 336px);
+    @include rem('padding-top', 48px);
+    @include rem('padding-bottom', 48px);
+    position: relative;
+    height: auto;
+    margin-top: 0;
+    text-align: center;
+
+    @include p-el(after) {
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-bottom: 1px solid palette(grey, x-light);
+    }
+
+  }
+
+  @include m(heading) {
+    @include rem('margin-top', 8px);
+    @include rem('font-size', 18px);
+    display: block;
+    font-weight: $font-weight--bold;
+    text-transform: uppercase;
+
+    a {
+      color: $black;
+    }
+  }
+
+  @include m(img) {
+    @include border-radius($br);
+    @include rem('width', 480px);
+  }
+
+  @include m(desc) {
+    color: palette(grey, light);
+    font-family: $font-family--secondary;
+
+    a {
+      color: $color-secondary;
+      cursor: pointer;
+
+      &:hover {
+        opacity: .85;
+      }
+
+      &:active {
+        opacity: initial;
+      }
+    }
+  }
+}
+
+// ==========================================================================
+// MEDIA QUERIES
+// ==========================================================================
+
+// SMALL
+@include media-q(small) {
+  // Port Product Panel + Grid
+  .port-product--panel {
+    @include rem('padding-right', 12px);
+    @include rem('padding-left', 12px);
+
+    &,
+    .grid {
+      margin-top: 0;
+    }
+  }
+
+  // Port Product Display Box
+  .port-product--display-box {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+
+    img {
+      max-width: 85%;
+    }
+  }
+}
+
+// MEDIUM
+@include media-q(medium) {
+  // Port Product Display Box
+  .port-product--display-box {
+    @include rem('padding', 36px);
+  }
+
+  // Port Product Desc
+  .port-product--desc {
+    @include rem('padding-bottom', 12px);
+  }
+}
+
+// LARGE
+@include media-q(large) {
+  .port-product--display-box {
+    @include rem('width', 420px);
+  }
+}

@@ -1,0 +1,23 @@
+// ==========================================================================
+// Grid Columns
+// ==========================================================================
+
+// Calculate grid columns
+.grid__col {
+  @include media-q(medium) {
+    @include g-columns;
+  }
+}
+
+// Column Styles
+[class^="grid__col"] {
+  @include media-q(medium) {
+    @include doubly(margin-left, percentage($g-gutter-w / $con));
+    min-height: 1px;
+    float: left;
+
+    &:last-of-type {
+      float: right;
+    }
+  }
+}

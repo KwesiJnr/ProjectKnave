@@ -1,0 +1,13 @@
+.idea/
+ProjectKnave19th.7z
+Purified/
+config.rb
+files/
+framework/assets/fonts/
+framework/assets/images/
+framework/assets/img/
+framework/assets/javascript/grunt/
+framework/assets/javascript/html5shiv/
+framework/assets/javascript/jquery/
+framework/assets/javascript/lodash/
+node_modules/

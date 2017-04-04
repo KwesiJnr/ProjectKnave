@@ -1,0 +1,92 @@
+/**
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * TABLE STYLES
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+@import "../utilities/mixins";
+@import "../utilities/config";
+@import "../utilities/functions";
+@import "../utilities/helpers";
+
+.table { // Vendor Table Element
+  @include rem('margin-bottom', 48px);
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid palette(grey, x-light);
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  @include m(caption) {
+    @include rem('font-size', 26.18px);
+    @include rem('margin-bottom', 24px);
+    font-weight: $font-weight--bold;
+    text-align: center;
+  }
+
+  @include m(heading) {
+    th {
+      @include rem('padding-top', 16px);
+      @include rem('padding-bottom', 16px);
+      @include rem('padding-left', 16px);
+
+      border-left: 1px solid palette(grey, x-light);
+    }
+  }
+
+  thead {
+    border-bottom: 1px solid palette(grey, x-light);
+    background-color: palette(grey, xx-light);
+    text-align: center;
+    vertical-align: baseline;
+  }
+
+  tr {
+    &:nth-of-type(2n) {
+      background-color: palette(grey, xx-light);
+    }
+  }
+
+  td {
+    @include rem('padding-top', 16px);
+    @include rem('padding-bottom', 16px);
+    @include rem('padding-left', 16px);
+    width: 33.33%;
+    border-bottom: 1px solid palette(grey, x-light);
+    border-left: 1px solid palette(grey, x-light);
+    text-align: center;
+  }
+}
+
+// ==========================================================================
+// Media Queries
+// ==========================================================================
+
+//SMALL
+@include media-q(small) {
+  .table {
+    @include rem('font-size', 14px);
+
+    td {
+      @include rem('padding-left', 6px);
+      @include rem('padding-right', 6px);
+    }
+  }
+
+  .table--heading {
+    text-align: center;
+
+    th {
+      padding-left: 0;
+    }
+  }
+}
+
+//MEDIUM
+@include media-q(medium) {
+  .table {
+    width: 85%;
+  }
+}

@@ -1,0 +1,23 @@
+// ==========================================================================
+// Icon Styles
+// ==========================================================================
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+
+.icn {
+  @include m(nav-toggle) { // Nav Toggle
+    @include rem('top', 8px);
+    @extend %icn-ui;
+    position: absolute;
+    width: 25px;
+    left: 0;
+    height: 17px;
+    border-top: 3px solid palette(grey, dark);
+    border-bottom: 3px solid palette(grey, dark);
+
+    @include p-el(before, 3px, 25px) {
+      top: 4px;
+      background-color: palette(grey, light);
+    }
+  }
+}

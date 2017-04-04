@@ -1,0 +1,165 @@
+/**
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * Blog Styles
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+.v-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: 0;
+}
+
+.content--persona--header {
+    text-align: center;
+}
+
+.content--persona--bio {
+    text-align: left;
+}
+
+.page-blog .blockquote--styled::before {
+    position: absolute;
+    content: '';
+}
+
+.centered {
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.content--persona {
+    padding-top: 48px;
+    padding-top: 4.8rem;
+    padding-bottom: 48px;
+    padding-bottom: 4.8rem;
+    border-top: 1px solid #dddddc;
+    border-bottom: 1px solid #dddddc;
+}
+
+.content--persona--photo {
+    width: 90px;
+    width: 9rem;
+    height: 90px;
+    height: 9rem;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.content--persona--name {
+    display: block;
+    margin-top: 0;
+    padding-top: 6px;
+    padding-top: 0.6rem;
+    color: #323e54;
+    font-size: 22px;
+    font-size: 2.2rem;
+}
+
+.content--persona--desc {
+    margin-top: 0;
+    padding-top: 4px;
+    padding-top: 0.4rem;
+    padding-bottom: 8px;
+    padding-bottom: 0.8rem;
+    color: #9d9d9c;
+    line-height: 1;
+}
+
+.content--persona--bio {
+    color: #323e54;
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+
+.content--persona--social {
+    margin-top: 8px;
+    margin-top: 0.8rem;
+    text-align: center;
+}
+
+.content--persona--social--twitter i {
+    color: #4D94FF;
+}
+
+.blog__hero--img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+
+.page-blog .blockquote--styled {
+    position: relative;
+    padding: 48px;
+    padding: 4.8rem;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 18px;
+    font-size: 1.8rem;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.page-blog .blockquote--styled::before {
+    top: 0;
+    left: -24px;
+    left: -2.4rem;
+    width: "null";
+    height: "null";
+    color: #dddddc;
+    content: '"';
+    font-style: italic;
+    font-size: 96px;
+    font-size: 9.6rem;
+}
+
+.page-blog .panel--isolate-min {
+    display: block;
+}
+
+.comment--author--section a,
+.content--persona--social a {
+    color: #4D94FF;
+}
+
+.comment--author--section a:hover,
+.content--persona--social a:hover {
+    opacity: .85;
+}
+
+.comment--author--section a:active,
+.content--persona--social a:active {
+    opacity: initial;
+}
+
+@media (min-width: 1px) and (max-width: 888px) {
+    .page-blog cite {
+        font-size: 14px;
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 889px) {
+    .blog__hero--img {
+        width: 90%;
+    }
+
+    .content--persona--photo {
+        width: 120px;
+        width: 12rem;
+        height: 120px;
+        height: 12rem;
+    }
+
+    .content--persona--desc {
+        font-size: 18px;
+        font-size: 1.8rem;
+        line-height: 1.5;
+    }
+}

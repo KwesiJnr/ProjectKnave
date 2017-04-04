@@ -1,0 +1,116 @@
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+/**
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * Login Page Styles
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+@import "utilities/mixins";
+@import "utilities/config";
+@import "utilities/functions";
+@import "utilities/helpers";
+
+.login {
+  @include m(info) {
+    @include rem('font-size', 14px);
+    display: block;
+    margin-top: 0;
+
+    a {
+      color: map_get($ui-colors, info);
+
+      &:hover {
+        opacity: .85;
+      }
+    }
+  }
+}
+
+// Overrides
+.page-login {
+  .l-header {
+    @include rem('margin-bottom', 48px);
+  }
+
+  .form {
+    @include rem('padding-left', 16px);
+    @include rem('padding-right', 16px);
+    @include border-radius($br);
+    margin-right: auto;
+    margin-left: auto;
+    background-color: palette(grey, ult-light);
+
+    text-align: center;
+  }
+
+  .form__input {
+    @include background-clip(padding-box);
+  }
+
+  .form__checkbox {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .img--logo,
+  .form__input {
+    @include rem('margin-bottom', 36px);
+  }
+
+  .form__input.footer__subscribe--email {
+    @include rem('margin-bottom', 6px);
+  }
+}
+
+// ==========================================================================
+// MEDIA QUERIES
+// ==========================================================================
+
+// SMALL
+@include media-q(small) {
+  // Body
+  .page-login {
+    background-color: palette(grey, ult-light);
+
+    // Header
+    .l-header {
+      @include rem('margin-bottom', 36px);
+    }
+
+    // Form
+    .form {
+      padding-top: 0;
+    }
+
+    // Image Logo
+    .img--logo {
+      @include rem('margin-bottom', 24px);
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+}
+
+// MEDIUM
+@include media-q(medium) {
+  .page-login {
+    .form {
+      padding-right: 0;
+      padding-left: 0;
+
+    }
+  }
+}
+
+// LARGE
+@include media-q(large) {
+  .page-login {
+    .form {
+      @include rem('padding-top', 24px);
+      background-color: transparent;
+    }
+  }
+}

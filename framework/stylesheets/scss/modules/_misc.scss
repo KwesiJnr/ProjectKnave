@@ -1,0 +1,274 @@
+/**
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * #MISCELLANEOUS STYLES
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat, PlaceholderInExtend, IdSelector
+@import "../utilities/mixins";
+@import "../utilities/config";
+@import "../utilities/functions";
+@import "../utilities/helpers";
+
+// Data Cluster Style
+.datac {
+  @include m(item) {
+    @include rem('margin-bottom', 72px);
+    @include rem('margin-top', 36px);
+
+    address {
+      font-style: normal;
+    }
+  }
+
+  @include m(map) {
+    margin-top: 0;
+
+    iframe {
+      @include rem('height', 198px);
+      width: 100%;
+    }
+  }
+
+  @include m(isolate) {
+    @include rem('padding-right', 24px);
+    @include rem('margin-bottom', 24px);
+
+    @include m(text) {
+      @include rem('font-size', 13px);
+    }
+  }
+}
+
+// Back to top and other page utility links
+.return {
+  @extend %center-align;
+  @include rem('padding-top', 12px);
+  @include rem('padding-bottom', 12px);
+
+  background-color: palette(black);
+  color: white;
+  cursor: pointer;
+
+  @include m(up) {
+    @extend .return;
+    width: 100%;
+  }
+
+  &:hover {
+    background-color: palette(black, light);
+  }
+}
+
+.node {
+  @include e(item) {
+    @include rem('margin-bottom', 24px);
+
+    @include m(heading) {
+      @include rem('font-size', 24px);
+      color: palette(grey, light);
+      font-weight: $font-weight--medium;
+    }
+
+    @include m(link) {
+      @include rem('margin-top', 16px);
+      display: block;
+      width: auto;
+    }
+
+    @include m(icn) {
+      @include rem('margin-right', 8px);
+      color: palette(grey);
+    }
+  }
+}
+
+// Advertisement
+.ad {
+  @extend %center-align;
+  @include rem('margin-top', 48px);
+  @include rem('margin-bottom', 84px);
+
+  height: auto;
+
+  @include m(mobile) {
+    margin-right: auto;
+    margin-left: auto;
+
+    @include media-q(medium) {
+      display: none;
+    }
+  }
+
+  @include m(desktop) {
+    display: none;
+  }
+
+  img {
+    @include rem('width', 240px);
+  }
+}
+
+.switch-view {
+  display: flex;
+  flex-flow: column;
+  margin-top: 0;
+}
+
+.c2a {
+  a {
+    color: $white;
+  }
+}
+
+.link--disabled {
+  @include rem('padding-left', 14px);
+  position: relative;
+
+  @include p-el(before) {
+    left: 0;
+    font-family: FontAwesome, sans-serif;
+    font-size: 14px;
+    content: '\f023';
+  }
+}
+
+// ==========================================================================
+// Comment/Query Box
+// ==========================================================================
+.comment {
+  @include m(author) {
+    @include m(section) {
+      @include border-radius($br);
+      @include rem('padding', 12px);
+      @include rem('margin-bottom', 24px);
+      background-color: palette(grey, xx-light);
+    }
+  }
+}
+
+// ==========================================================================
+// Notice
+// ==========================================================================
+.notice {
+  @include rem('font-size', 14px);
+  display: block;
+  width: 85%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+
+  @include m(content) {
+    @include border-radius($br);
+    @include rem('padding', 6px);
+    //border: 1px solid $black;
+    background-color: map_get($ui-colors, info);
+    color: $white;
+    vertical-align: middle;
+  }
+
+  @include m(icn) {
+    @include rem('margin-right', 4px);
+    color: $color-accent;
+  }
+}
+
+// ==========================================================================
+// Acknowledgement Landing Page
+// ==========================================================================
+.ack {
+  @include m(container) {
+    @include rem('padding-left', 24px);
+    @include rem('padding-right', 24px);
+    @include border-radius($br);
+    border: 1px dashed palette(grey, x-light);
+    text-align: center;
+  }
+
+  @include m(header) {
+    @include rem('margin-bottom', 36px);
+    @include rem('font-size', 32px);
+    @include rem('letter-spacing', .5px);
+
+    font-weight: $font-weight--bold;
+    line-height: 1.12;
+  }
+
+  @include e(icn) {
+    @include m(subscrb) {
+      color: palette(grey, x-light);
+      @include rem('font-size', 120px);
+    }
+
+    @include m(origin) {
+      @include m(heading) {
+        color: palette(grey, light);
+      }
+    }
+  }
+
+  @include m(redir) {
+    display: block;
+  }
+}
+
+// ==========================================================================
+// MEDIA QUERIES
+// ==========================================================================
+// SMALL
+@include media-q(small) {
+  // Data Cluster Item
+  .datac--item {
+    @include rem('padding-bottom', 36px);
+    @include rem('margin-bottom', 36px);
+    border-bottom: 1px dotted palette(grey, x-light);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  // Node Item + N.I. Link
+  .node__item {
+    @include rem('margin-bottom', 35px);
+
+    &--link {
+      margin-top: 0;
+
+      a:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+// MEDIUM
+@include media-q(medium) {
+  // Ad Desktop and Image
+  .ad {
+    &--desktop {
+      display: block;
+    }
+
+    img {
+      width: auto;
+    }
+  }
+
+  // Switch View
+  .switch-view {
+    display: block;
+  }
+
+  .datac--map {
+    iframe {
+      @include rem('height', 216px);
+    }
+  }
+
+  // Ack Container
+  .ack--container {
+    @include rem('padding-left', 36px);
+    @include rem('padding-right', 36px);
+  }
+}

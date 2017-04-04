@@ -1,0 +1,140 @@
+/**
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * FOOTER STYLES
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat, ElsePlacement, NestingDepth
+@import "../utilities/mixins";
+@import "../utilities/config";
+@import "../utilities/functions";
+@import "../utilities/helpers";
+@import "../modules/index";
+
+.footer {
+  @include e(prim) {
+    //@include rem('padding-left', 12px);
+    //@include rem('padding-right', 12px);
+  }
+
+  @include e(sec) {
+    @include rem('padding-top', 12px);
+    @include rem('padding-bottom', 12px);
+    background-color: palette(black);
+
+    @include m(lft) { // footer 1
+      @extend %float-left;
+      margin-top: 0;
+
+      &-content { // footer 1 content
+        @extend %align-left;
+      }
+    }
+
+    @include m(rt) { // footer 2
+      @extend %float-right;
+      margin-top: 0;
+
+      &-content { // footer 2 content
+        @extend %align-right;
+      }
+    }
+  }
+
+  @include e(item) {
+    @include rem('margin-top', 24px);
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+
+    @include m(heading) {
+      @include rem('margin', 12px 0);
+      color: map_get($ui-colors, info);
+      text-transform: uppercase;
+    }
+
+    @include m(list) { // list style
+      @extend %center-align;
+
+      li {
+        @include rem('margin-bottom', 8px);
+        text-transform: none;
+      }
+
+      a:hover {
+        color: $white;
+      }
+    }
+
+  }
+
+  @include e(subscribe) {
+    @include rem('margin-bottom', 72px);
+    text-align: center;
+
+    @include m(desc) {
+      @include rem('margin-top', 24px);
+      @include rem('margin-bottom', 24px);
+    }
+
+    @include m(email) {
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.l-footer {
+  @extend %panel-padding;
+  margin-top: 0;
+  padding-bottom: 0;
+  border-top: 1px solid map_get($ui-colors, info);
+  background-color: palette(black, dark);
+  color: $white;
+  //text-transform: uppercase;
+
+  @include m(social) {
+    @include rem('margin-bottom', 36px);
+    position: relative;
+    text-align: center;
+
+    @include m(icn) {
+      @include rem('font-size', 16px);
+      @include rem('margin-left', 12px);
+      @include rem('margin-right', 12px);
+      @include transition(all $trns-duration);
+
+      display: inline-block;
+      margin-top: 0;
+
+      &:hover {
+        color: map_get($ui-colors, info);
+      }
+    }
+  }
+}
+
+// ==========================================================================
+// MEDIA QUERIES
+// ==========================================================================
+// SMALL
+@include media-q(small) {
+  .form__input.footer__subscribe--email {
+    @include rem('margin-bottom', 6px);
+  }
+}
+
+// MEDIUM
+@include media-q(medium) {
+  .footer__item {
+    @include rem('padding', 0 24px);
+    display: block;
+    text-align: left;
+
+    &--list {
+      text-align: left;
+    }
+  }
+}

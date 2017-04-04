@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Data -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Stylesheets -->
+    <style><?php readfile( getcwd() . "/stylesheets/css/critical/styles.css"); ?></style>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.google.com/" crossorigin>
+    <script>
+        (function () {
+            if (sessionStorage.fonts) {
+                console.log("Fonts installed over last session.");
+                document.documentElement.classList.add('wf-active');
+            } else {
+                console.log("Required fonts not yet installed/cached.");
+            }
+        })();
+    </script>
+    <title>Knave GmBH | Portfolio</title>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="l__header--primary" id="top" role="banner">
+    <div class="grid">
+        <h1 class="logo"> <!-- takes 30%+ grid -->
+            <a class="" href="index.html" title="Knave Incorporated Home">Knave Inc.</a>
+        </h1><!-- end of logo -->
+        <!-- logo for mobile -->
+        <a class="site-logo" href="index.html">
+            <b class="v-hidden">
+                Knave &mdash; A Greyback Company.
+            </b>
+        </a><!-- end of mobile logo -->
+
+        <ul class="btn-dashboard">
+            <li>
+                <span class="">Dashboard</span><i class="fa fa-angle-down"></i>
+
+                <ul class="btn-dashboard--child">
+                    <li><a href="accountdir/sign_up.html">Sign Up</a></li>
+                    <li><a href="accountdir/login.html">Log In</a></li>
+                    <li><a href="accountdir/acct.html">Account</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+        <nav class="navbar" role="navigation">
+            <h3 class="v-hidden">Main Navigation</h3>
+            <!-- toggle for mobile -->
+            <span id="toggle" class="icn--nav-toggle is-displayed-mobile">
+                    <b class="v-hidden">Toggle</b>
+                </span><!-- end of toggle for mobile -->
+
+            <!-- Desktop Navigation -->
+            <ul class="nav is-collapsed-mobile">
+                <li class="nav__item">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="nav__item  nav__item--current">
+                    <a href="portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav__item">
+                    <a href="pserv.html">Products & Services</a>
+                </li>
+                <li class="nav__item">
+                    <a href="blog/blog.html">Blog</a>
+                </li>
+                <li class="nav__item">
+                    <a href="about.html">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav><!-- end of nav -->
+    </div>
+</header><!-- end of Header -->
+
+<!-- Simulate margin from sticky header -->
+<div class="l__header--primary--support--sec"></div>
+<!-- MAIN -->
+<section class="port-product--panel">
+    <div class="grid panel--centered hero--text">
+        <h1 class="hl-prim">Portfolio</h1>
+        <h4 class="hl__sec hl__sec--grouped">Recent projects completed for high-end global clients</h4>
+    </div>
+
+    <div class="grid">
+        <section class="grid__col--6 port-product--display-box">
+            <a href="http://www.harmankardon.com/wireless-speakers/HKNOVA.html" target="_blank">
+                <img src="assets/images/port-gallery/Harmon-Kardon.jpg"
+                     srcset="assets/images/port-gallery/Harmon-Kardon-1.5.jpg 1.5x" class="port-product--img"
+                     alt="Nova for Harmon Kardon Ltd.">
+            </a>
+            <h2 class="port-product--heading"><a href="http://www.harmankardon.com/wireless-speakers/HKNOVA.html"
+                                                 target="_blank">Nova Black</a></h2>
+            <span class="port-product--desc">Developed for <a
+                    href="http://www.harmankardon.com/wireless-speakers/HKNOVA.html" target="_blank">Harmon-Kardon</a>,
+                October 2016</span>
+        </section>
+
+        <section class="grid__col--6 port-product--display-box">
+            <a href="http://bit.ly/2kJxJfs" target="_blank"><img src="assets/images/port-gallery/logitech1000.jpg"
+                                                                 srcset="assets/images/port-gallery/logitech1000-1.5.jpg 1.5x"
+                                                                 class="port-product--img" alt="UE900S for Logitech">
+            </a>
+
+            <h2 class="port-product--heading"><a href="http://bit.ly/2kJxJfs" target="_blank">Ultimate Ears UE900s</a>
+            </h2>
+            <span class="port-product--desc">Developed for <a href="http://www.logitech.com"
+                                                              target="_blank">Logitech&reg;</a>,
+                June 2015</span>
+        </section>
+    </div><!-- end of box-pair-1 -->
+
+
+    <div class="grid">
+        <section class="grid__col--6 port-product--display-box">
+            <a href="http://bit.ly/2baJKeA" target="_blank"><img src="assets/images/port-gallery/aira.jpg"
+                                                                 srcset="assets/images/port-gallery/aira-1.5.jpg 1.5x"
+                                                                 class="port-product--img" alt="Aira TR-8 Drum Machine">
+            </a>
+
+            <h2 class="port-product--heading"><a href="http://bit.ly/2baJKeA">Aira TR-8</a></h2>
+            <span class="port-product--desc">Developed for <a href="https://www.roland.com/"
+                                                              target="_blank">Roland&reg;</a>, January
+                2016</span>
+        </section>
+
+        <section class="grid__col--6 port-product--display-box">
+            <a href="http://bit.ly/2lvnY9l" target="_blank"><img src="assets/images/port-gallery/audioengine.jpg"
+                                                                 srcset="assets/images/port-gallery/audioengine-1.5.jpg 1.5x"
+                                                                 class="port-product--img"
+                                                                 alt="AudioEngine A2+ AudioEngine">
+            </a>
+
+            <h2 class="port-product--heading"><a href="http://bit.ly/2lvnY9l">AudioEngine A2+</a></h2>
+            <span class="port-product--desc">Developed for <a href="https://audioengineusa.com/" target="_blank">AudioEngine&reg;</a>,
+                May
+                2016</span>
+        </section>
+    </div><!-- end of box-pair-2 -->
+
+
+    <div class="grid">
+        <section class="grid__col--6 port-product--display-box">
+            <a href="http://www.ultimateears.com/en-us/ueboom2" target="_blank"><img
+                    src="assets/images/port-gallery/logitechboom.jpg"
+                    srcset="assets/images/port-gallery/logitechboom-1.5.jpg 1.5x" class="port-product--img"
+                    alt="Ultimate Ears Boom for Logitech">
+            </a>
+
+            <h2 class="port-product--heading"><a href="http://www.ultimateears.com/en-us/ueboom2" target="_blank">UE
+                Boom</a></h2>
+            <span class="port-product--desc">Developed for <a href="http://www.logitech.com"
+                                                              target="_blank">Logitech&reg;</a>,
+                September 2014</span>
+        </section>
+
+        <section class="grid__col--6 port-product--display-box">
+            <a href="http://bit.ly/2lY6TCi" target="_blank"><img src="assets/images/port-gallery/sonons-play.jpg"
+                                                                 srcset="assets/images/port-gallery/sonons-play-1.5.jpg 1.5x"
+                                                                 class="port-product--img"
+                                                                 alt="Sonos Play:1">
+            </a>
+
+            <h2 class="port-product--heading"><a href="http://bit.ly/2lY6TCi">Sonos Play:1</a></h2>
+            <span class="port-product--desc">Developed for <a href="https://www.sonos.com/en/home">Sonos USA</a>, March
+                2015</span>
+        </section>
+    </div><!-- end of box-pair-3 -->
+</section>
+
+
+<a href="#top">
+    <div class="return--up">Back to top
+    </div>
+</a>
+
+
+<!-- FOOTER -->
+
+<footer class="l-footer">
+    <div class="grid footer__prim">
+        <section class="footer__subscribe">
+            <h4 class="footer__subscribe--desc">Receive updates, newsletters & offers</h4>
+            <form action="">
+                <label for="sub_email" class="form__label--hidden">Email Address</label>
+                <input type="email" id="sub_email" name="usr_email" class="form__input" placeholder="E-mail Address">
+                <a href="#">
+                    <input type="submit" class="btn--info" value="Subscribe">
+                </a>
+            </form>
+        </section>
+
+        <section class="l-footer--social">
+            <h4 class="footer__subscribe--desc">Find Us On</h4>
+
+            <a href="#" class="l-footer--social--icn">
+                <i class="fa fa-facebook-square fa-3x"></i>
+            </a><!-- facebook -->
+            <a href="#" class="l-footer--social--icn">
+                <i class="fa fa-twitter-square fa-3x"></i>
+            </a><!-- twitter -->
+            <a href="#" class="l-footer--social--icn">
+                <i class="fa fa-google-plus-square fa-3x"></i>
+            </a><!-- google-plus -->
+        </section>
+
+        <section class="grid__col--4 footer__item">
+            <h4 class="footer__item--heading">Get to Know Us</h4>
+
+            <ul class="footer__item--list">
+                <li><a href="about.html">
+                    About Knave Inc.
+                </a>
+                </li>
+
+                <li><a href="contact.html">
+                    Contact Us
+                </a>
+                </li>
+            </ul>
+        </section><!-- end of footer item 1 -->
+
+
+        <section class="grid__col--4 footer__item">
+            <h4 class="footer__item--heading">Wanna Work?</h4>
+
+
+            <ul class="footer__item--list">
+                <li><a href="misc/vendors.html">Become a Knave Vendor</a>
+                </li>
+
+            </ul>
+        </section><!-- end of footer item 2 -->
+
+        <section class="grid__col--4 footer__item">
+            <h4 class="footer__item--heading">Account Services</h4>
+
+            <ul class="footer__item--list">
+                <li><a href="accountdir/acct.html">Your Account</a>
+                </li>
+
+                <li><a href="accountdir/trackr.html">Track an order</a>
+                </li>
+
+                <li><a href="accountdir/sign_up.html">Sign Up</a>
+                </li>
+            </ul>
+        </section><!-- end of footer item 3 -->
+    </div>
+
+
+    <div class="footer__sec">
+        <div class="grid">
+            <span class="footer__sec--lft">
+                <small class="footer__sec--1-content">&copy;2017 Knave Inc. GmBH, Accra.</small>
+            </span>
+
+            <span class="footer__sec--rt">
+                 <small class="footer__sec--2-content">A Greyback Company</small>
+            </span>
+        </div>
+
+    </div>
+</footer>
+
+<<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+<!-- LoDash -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"
+        integrity="sha256-8E6QUcFg1KTnpEU8TFGhpTGHw5fJqB9vCms3OhAYLqw=" crossorigin="anonymous"></script>
+
+
+<!-- Default Scripts -->
+<script src="assets/javascript/scripts.js"></script>
+
+<!-- HTML5hiv -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"
+        integrity="sha256-1eSvllkLdrfxD6G8RGF9h+mQuD93Af5+GdPBMNc7uMQ=" crossorigin="anonymous"></script>
+
+<!-- FontAwesome -->
+<script src="https://use.fontawesome.com/3eec833028.js"></script>
+
+<!-- Web Font Loader -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"
+        integrity="sha256-FL2n/ULq4lZxp5qZGW6boR09sNrvvpsQhjsFxEmcfm8=" crossorigin="anonymous"></script>
+
+<script>
+    WebFontConfig = {
+        google: {
+            families: ['Assistant:200,300,400,600,700,800', 'Ubuntu']
+        },
+        timeout: 2400,
+        // other options and settings
+        active: function () {
+            sessionStorage.fonts = true;
+        }
+    };
+
+    (function (d) {
+        var wf = d.createElement('script'), s = d.scripts[0];
+        wf.src = "https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js";
+        s.parentNode.insertBefore(wf, s);
+    })(document);
+</script>
+</body>
+</html>

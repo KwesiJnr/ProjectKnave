@@ -1,0 +1,29 @@
+/**
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * Navbar Styles
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+
+.navbar {
+
+  @include rem('padding-bottom', 12px);
+  float: right;
+
+  @include media-q(small) { // Mobile
+    display: block;
+    width: auto;
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 0;
+    float: none;
+  }
+  @include media-q(medium) {
+    margin-top: 0;
+  }
+  //@include media-q(large) {
+  //  @include rem('margin-top', 14px);
+  //}
+}

@@ -1,0 +1,51 @@
+.img {
+  // Hero Image
+  @include m(hero) {
+    @extend .centered;
+    display: block;
+    line-height: 1;
+
+    @include media-q(medium) {
+      width: 65%;
+      //margin-top: 0;
+    }
+  }
+
+  // Featured Images
+  @include m(featured) {
+    @include border-top-right-radius($br);
+    @include border-top-left-radius($br);
+    width: 100%;
+    //@include rem('margin-top', 12px);
+
+    @include media-q(small) {
+      //display: none;
+    }
+  }
+
+  // Logo Image
+  @include m(logo) {
+    width: 20%;
+    height: 20%;
+  }
+}
+
+// ==========================================================================
+// MEDIA QUERIES
+// ==========================================================================
+
+// SMALL
+@include media-q(small) {
+  .img--logo {
+    @include rem('width', 120px);
+  }
+}
+
+// LARGE
+@include media-q(large) {
+  .img--hero {
+    //@include rem('width', 1200px);
+    margin-left: 0;
+    float: left;
+  }
+}

@@ -1,0 +1,50 @@
+/**
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * NAVIGATION BAR STYLES
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+
+.nav {
+  //@include rem('padding-bottom', 8px);
+  display: table;
+  border-collapse: collapse;
+
+  @include media-q(small) { // Mobile
+    @include rem('padding-top', 96px);
+    display: block;
+    //background-color: palette(grey, x-light);
+  }
+
+  // style for individual nav items
+  @include e(item) {
+    @extend %nav-item-horz;
+
+    @include m(current) {
+      @extend %nav-item-on;
+    }
+
+    a {
+      @extend %nav-item-link;
+
+      &:hover,
+      &:active {
+        @extend %nav-item-on;
+      }
+    }
+
+  }
+}
+
+[class^="nav__item"] { /* transition for navigation items on hover */
+  a:hover {
+    transition: .5s;
+  }
+}
+
+@include media-q(small) {
+  .navbar {
+    position: relative;
+  }
+}

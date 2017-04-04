@@ -1,0 +1,59 @@
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat, PlaceholderInExtend, IdSelector
+@import "utilities/mixins";
+@import "utilities/config";
+@import "utilities/functions";
+
+.page-subscribe {
+  .logo {
+    margin: 0;
+    float: none;
+    text-align: center;
+
+    @include rem('padding-bottom', 24px);
+    @include rem('padding-top', 24px);
+    @include rem('font-size', 21.08px);
+    display: block;
+    margin-top: 0;
+
+    a {
+      color: $white;
+
+      &:hover {
+        color: palette(grey, light);
+      }
+    }
+  }
+
+  .l__header--primary {
+    @include transition(all .4s ease);
+    position: fixed;
+    margin-top: 0;
+    padding-bottom: 0;
+    border-bottom: 1px solid map_get($ui-colors, info);
+    background-color: palette(black, dark);
+    top: 0;
+    height: auto;
+  }
+
+  .site-logo--mail {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .l-footer {
+    padding-top: 0;
+  }
+}
+
+body.page-subscribe {
+  @include rem('padding-top', 108px);
+}
+
+.page-subscribe .l-footer,
+.page-member .l-footer {
+  border: 0;
+  background-color: transparent;
+}
+

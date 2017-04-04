@@ -1,0 +1,200 @@
+/**
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * BASE STYLES
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+
+* {
+  box-sizing: border-box;
+}
+
+// Lobotomized owl
+* + * {
+  @include rem('margin-top', 24px);
+}
+
+// Fallback for WebFont Loader
+$prim-heading-fallback: 'Calibri';
+$sec-heading-fallback: 'Segoe UI';
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: $white;
+  color: $black;
+  font-family: $font-family--primary;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+
+  &.active .featured__item--info {
+    display: block;
+  }
+
+}
+
+/* Resetting margins and padding for base elements */
+p,
+i,
+label,
+figcaption,
+figure,
+h1,
+h2,
+h3,
+h4,
+ul,
+li {
+  margin: 0;
+  font-style: normal;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+a {
+  color: palette(grey, light);
+  outline: none;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+h1 {
+  @include rem('font-size', 68.54px);
+}
+
+h2 {
+  //@include rem('margin-top', 24px);
+  @include rem('font-size', 42.36px);
+  line-height: 1.5;
+}
+
+h3 {
+  @include rem('font-size', 26.18px);
+}
+
+h4 {
+  @include rem('font-size', 16.18px);
+}
+
+h5,
+small {
+  @include rem('font-size', 10px);
+}
+
+h6 {
+  @include rem('font-size', 6.18px);
+}
+
+blockquote {
+  @include rem('font-size', 14px);
+  margin-left: 0;
+  margin-right: 0;
+  text-align: justify;
+  font-weight: $font-weight--light;
+
+  @include media-q(small) {
+    text-align: left;
+  }
+
+  cite {
+    @include rem('font-size', 14px);
+    display: block;
+    color: map_get($ui-colors, info);
+
+    font-style: normal;
+    font-weight: $font-weight--medium;
+    &::before {
+      color: map_get($ui-colors, info);
+      content: '\2014';
+    }
+  }
+}
+
+// Image Style
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * Form Base
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+
+// Input
+br {
+  margin: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input,
+textarea {
+  @include rem('padding', 16px);
+
+  display: inline-block;
+  outline: 0;
+  border: 0;
+
+  @include input-placeholder {
+    color: palette(grey, light);
+  }
+
+  @include media-q(small) {
+    //@include rem('padding', 12px);
+    //width: 100%;
+  }
+
+  @include media-q(medium) {
+    //width: 65%;
+  }
+}
+
+legend,
+fieldset {
+  border: 0;
+  outline: 0;
+}
+
+label {
+  @include rem('font-size', 18px);
+  @include rem('margin-bottom', 6px);
+
+  color: palette(grey, dark);
+  font-weight: $font-weight--bold;
+}
+
+option {
+  background-color: $white;
+  color: palette(black, light);
+}
+
+optgroup {
+  color: palette(black, light);
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+}
+
+select {
+  @include rem('margin-bottom', 36px);
+}

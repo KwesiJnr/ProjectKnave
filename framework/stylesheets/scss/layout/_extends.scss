@@ -1,0 +1,49 @@
+/**
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * Panel Placeholders
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat, ElsePlacement
+
+%panel-default {
+  @include rem('padding-top', 24px);
+  margin-top: 0;
+
+  @include media-q(medium) {
+    @include rem('padding-bottom', 24px);
+  }
+}
+
+%panel-padding {
+  @include rem('padding-top', 36px);
+  margin-top: 0;
+
+  @include media-q(small) {
+    @include rem('padding-bottom', 36px);
+  }
+
+  @include media-q(medium) {
+    @include rem('padding-top', 84px);
+    @include rem('padding-bottom', 48px);
+  }
+}
+
+// ==========================================================================
+// Featured Styles
+// ==========================================================================
+%featured-primary {
+  //@include rem('padding-bottom', 36px);
+  @include rem('font-size', 20px);
+  margin-top: 0;
+  width: 100%;
+}
+
+%featured-item-link {
+  text-align: left;
+
+  a:hover {
+    color: palette(grey, light);
+  }
+}

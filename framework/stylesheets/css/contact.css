@@ -1,0 +1,48 @@
+.v-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: 0;
+}
+
+.centered {
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.page-contact .l-header {
+    margin-bottom: 0;
+}
+
+.page-contact .grid__col--4.node__item {
+    float: left;
+}
+
+.page-contact .node__item address {
+    font-style: normal;
+}
+
+.page-contact .form {
+    background-color: transparent;
+}
+
+.page-contact .form__textarea {
+    margin-bottom: 4px;
+    margin-bottom: 0.4rem;
+}
+
+@media (min-width: 1152px) {
+    .page-contact .form__input,
+    .page-contact .form__textarea {
+        max-width: 55%;
+    }
+
+    .page-contact .form__textarea--subtext {
+        padding-left: 0;
+    }
+}

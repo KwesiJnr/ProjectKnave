@@ -1,0 +1,360 @@
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat,PlaceholderInExtend
+/**
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * #FORM STYLES
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+@import "../utilities/mixins";
+@import "../utilities/config";
+@import "../utilities/functions";
+@import "../utilities/helpers";
+
+.form {
+  @include border-radius($br);
+  @include rem('margin-bottom', 72px);
+
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: palette(grey, ult-light);
+
+  @include e(input) { // input style
+    //position: relative;
+    @include rem('border-radius', 6px);
+    @include rem('margin-bottom', 60px);
+    @include background-clip(padding-box);
+
+    display: inline-block;
+    //border-bottom: 4px solid palette(grey, light);
+    background-color: palette(grey, x-light);
+    color: palette(black, light);
+
+    //@include m(subtext) {
+    //  @include rem('font-size', 14px);
+    //  @include transition(opacity $trns-duration, visibility $trns-duration ease-in-out);
+    //
+    //  display: inline-block;
+    //  color: palette(grey, light);
+    //  opacity: 0;
+    //  visibility: hidden;
+    //
+    //  @include m(cond) {
+    //    display: inline-block;
+    //  }
+    //}
+
+    @include m(grouped) {
+      @include rem('margin-bottom', 18px);
+      margin-top: 0;
+
+      .form__input {
+        @include rem('margin-bottom', 6px);
+      }
+    }
+
+    &:focus {
+      transition: all $trns-duration;
+      //border-bottom-color: $color-secondary;
+      background-color: palette(grey, xx-light);
+
+      //+ .form__input--subtext,
+      //+ .form__textarea--subtext {
+      //  opacity: 1;
+      //  visibility: visible;
+      //}
+    }
+  }
+
+  @include e(label) {
+    display: block;
+
+    @include m(hidden) {
+      @extend .v-hidden;
+    }
+  }
+
+  @include e(textarea) {
+    @extend .form__input;
+    @include rem('margin-top', 10px);
+    display: block;
+
+    //@include m(subtext) {
+    //  @extend .form__input--subtext;
+    //  display: inline-block;
+    //  margin-top: 0;
+    //  padding-left: 0;
+    //}
+  }
+
+  @include e(checkbox) {
+    @include rem('margin-right', 4px);
+
+    @include m(label) {
+      @include rem('font-size', 16px);
+      display: inline-block;
+      font-weight: $font-weight--light;
+      line-height: 1;
+
+      &:last-child {
+        @include rem('margin-bottom', 48px);
+      }
+    }
+  }
+
+  @include e(radio) {
+    @extend .form__checkbox;
+
+    @include m(label) {
+      @extend .form__checkbox--label;
+
+      &:last-of-type {
+        @include rem('margin-bottom', 48px);
+      }
+    }
+  }
+
+  @include e(button) {
+    @include m(wrapper) {
+      @include rem('margin-top', 36px);
+      line-height: 0;
+    }
+  }
+
+  @include e(legend) {
+    @include rem('margin-top', 12px);
+    @include rem('font-size', 24px);
+    font-weight: $font-weight--light;
+    line-height: 1;
+
+    // Fix for Safari legend<->margin bug
+    & + * {
+      display: block;
+      @include rem('margin-top', 48px);
+      -webkit-margin-collapse: separate;
+    }
+  }
+
+  @include e(fieldset) {
+    //@include rem('margin-bottom', 36px);
+    @include doubly(margin-top, 48px);
+    margin-top: 0;
+    padding: 0;
+  }
+
+  @include e(select) {
+    @include rem('margin-top', 2px);
+    @include rem('padding', 4px);
+    border: 0;
+    outline: 0;
+    background-color: $white;
+    color: palette(grey);
+  }
+
+  @include m(heading) {
+    @include rem('margin-bottom', 48px);
+    @include rem('font-size', 36px);
+  }
+
+  @include e(policy) {
+    @include rem('font-size', 12px);
+
+    a {
+      color: map_get($ui-colors, info);
+
+      &:hover {
+        opacity: .85;
+      }
+
+      &:active {
+        opacity: initial;
+      }
+    }
+  }
+
+  @include m(num) {
+    @include border-radius(100%);
+    @include rem('width', 30px);
+    @include rem('height', 30px);
+    @include rem('line-height', 30px);
+    @include rem('margin-right', 12px);
+    @include rem('font-size', 18px);
+
+    display: inline-block;
+    background-color: map_get($ui-colors, success);
+    color: $white;
+    text-align: center;
+  }
+}
+
+select {
+  @include rem('margin-bottom', 36px);
+}
+
+// ==========================================================================
+// Special Form Styles
+// ==========================================================================
+.form__label {
+  @include m(styled) {
+    position: relative;
+    display: block;
+
+    span {
+      @include transition(all 150ms ease);
+      @include rem('margin-bottom', 6px);
+      @include rem('top', -32px);
+      position: absolute;
+      left: 0;
+      cursor: text;
+      //color: $color-secondary;
+    }
+
+    &.empty span { // simulate placeholder
+      @include rem('font-size', 14px);
+      @include rem('left', 16px);
+      @include transform(translateY(-50%));
+      top: 50%;
+      color: palette(grey);
+      font-weight: $font-weight--light;
+      transform: translateY(-50%);
+    }
+
+    > .form__input {
+      @include rem('font-size', 16px);
+      width: 100%;
+
+      &:first-of-type {
+        @include rem('margin-top', 32px);
+      }
+    }
+
+  }
+}
+
+.form__input {
+  @include m(styled) {
+    display: block;
+  }
+}
+
+//input:invalid {
+//  border: 1px solid $color-primary;
+//}
+//
+//input:valid {
+//  border: 1px solid $color-secondary;
+//}
+////
+////
+//input:valid {
+//  border-bottom-width: 2px;
+//}
+input:required:valid {
+  background-position: right 12px center;
+  background-position-x: 98%;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  transition: background-image $trns-duration ease;
+}
+
+input:required:valid {
+  @include background-image(image_url('validation/yes.png'));
+}
+
+//input:required:invalid {
+//  @include background-image(image_url('validation/no.png'));
+//}
+
+input.empty {
+  border-color: transparent;
+}
+
+// ==========================================================================
+// Media Queries
+// ==========================================================================
+
+// SMALL
+@include media-q(small) {
+  // Form Input
+  .form__input,
+  .form__label--styled {
+    width: 100%;
+  }
+
+  //// Form Input Subtext
+  //.form__input--subtext {
+  //  @include rem('margin-bottom', 36px);
+  //  margin-top: 0;
+  //  padding-left: 0;
+  //}
+
+  // Form Textarea
+  .form__textarea {
+    @include rem('margin-bottom', 36px);
+  }
+
+  // Form Select
+  .form__select {
+    width: 90%;
+  }
+
+  // Form Heading
+  .form--heading {
+    @include rem('font-size', 24px);
+    @include rem('margin-bottom', 48px);
+    text-align: center;
+  }
+}
+
+// MEDIUM
+@include media-q(medium) {
+  // Form Input
+  .form__input,
+  .form__select,
+  .form__label--styled {
+    width: 65%;
+  }
+
+  //// Form Input Subtext
+  //.form__input--subtext {
+  //  @include rem('padding-left', 16px);
+  //  opacity: 1;
+  //  visibility: visible;
+  //}
+
+  //// Form Textarea Subtext
+  //.form__textarea--subtext {
+  //  padding-left: 0;
+  //}
+
+  // Form Policy
+  .form__policy {
+    @include rem('width', 432px);
+  }
+  //// Conditional Subtext
+  //.form__input--subtext--cond {
+  //  display: none;
+  //}
+}
+
+// LARGE
+@include media-q(large) {
+  // Form Input + Textarea + Select
+  .form__input,
+  .form__textarea,
+  .form__select,
+  .form__label--styled {
+    @include rem('max-width', 480px);
+    //@include rem('margin-bottom', 36px);
+  }
+
+  //// Form Input Subtext
+  //.form__input--subtext {
+  //  @include rem('padding-left', 36px);
+  //}
+  //
+  //// Conditional Subtext
+  //.form__input--subtext--cond {
+  //  display: inline-block !important; // fixable?
+  //}
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Data -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- HTML5Shiv -->
+    <!--[if lt IE 9]>
+    <script src="../assets/javascript/html5shiv/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="../stylesheets/css/styles.css">
+    <link rel="stylesheet" href="../stylesheets/css/login.css">
+    <title>Log In | Knave GmBH</title>
+</head>
+
+<body id="login">
+<header class="l__header--primary" id="top" role="banner">
+    <div class="grid">
+        <h1 class="logo"> <!-- takes 30%+ grid -->
+            <a class="" href="../index.html" title="Knave Incorporated Home">Knave Inc.</a>
+        </h1><!-- end of logo -->
+        <!-- logo for mobile -->
+        <a class="site-logo" href="../index.html">
+            <b class="v-hidden">
+                Knave &mdash; A Greyback Company.
+            </b>
+        </a><!-- end of mobile logo -->
+
+        <ul class="btn-dashboard">
+            <li>
+                <span class="">Dashboard</span><i class="fa fa-angle-down"></i>
+
+                <ul class="btn-dashboard--child">
+                    <li><a href="sign_up.html">Sign Up</a></li>
+                    <!--<li><a href="login.html">Log In</a></li>-->
+                    <li><a href="acct.html">Account</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+        <nav class="navbar" role="navigation">
+            <h3 class="v-hidden">Main Navigation</h3>
+            <!-- toggle for mobile -->
+            <span id="toggle" class="icn--nav-toggle is-displayed-mobile">
+                    <b class="v-hidden">Toggle</b>
+                </span><!-- end of toggle for mobile -->
+
+            <!-- Desktop Navigation -->
+            <ul class="nav is-collapsed-mobile">
+                <li class="nav__item">
+                    <a href="../index.html">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../pserv.html">Products & Services</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../blog/blog.html">Blog</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../about.html">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav><!-- end of nav -->
+    </div>
+</header><!-- end of Header --->
+
+<!-- Simulate margin from sticky header -->
+<div class="l__header--primary--support--sec"></div>
+<!-- MAIN -->
+<section class="grid">
+    <h1 class="v-hidden panel--centered">Login Form</h1>
+    <form action="login.html" method="post" class="form grid__col--8 panel--padded">
+
+        <fieldset class="form__fieldset">
+            <img src="../assets/images/logo/knave-redact.svg" class="img--logo" alt="Knave Inc Logo-Redacted">
+            <h1 class="form--heading">Log In.</h1>
+
+
+            <label for="u-name" class="form__label">Username</label>
+            <input type="email" id="u-name" name="usr_name" class="form__input" placeholder="example@knavemail.com">
+            <!-- grouped input -->
+            <div class="form__input--grouped">
+                <label for="u-pass" class="form__label">Password</label>
+                <input type="password" id="u-pass" name="usr_pass" class="form__input" placeholder="Password">
+                <span class="login--info">
+                    <a href="recovery/pass_reset.html">Forgotten password?</a>
+                </span>
+            </div>
+
+            <label for="login_remember"></label>
+            <input type="checkbox" id="login_remember" name="usr_remember" value="login_remember"
+                   class="form__checkbox"><label
+                for="login_remember" class="form__checkbox--label">Remember Me</label>
+
+            <div class="form__button--wrapper">
+                <input type="submit" value="Log In" class="btn--success">
+            </div>
+        </fieldset>
+
+        <span class="login--info">
+            <a href="sign_up.html">
+                Don't have an account? Sign up here.
+            </a>
+        </span>
+    </form>
+</section>
+
+
+<footer class="l-footer">
+    <div class="grid footer__prim">
+        <section class="footer__subscribe">
+            <h4 class="footer__subscribe--desc">Receive updates, newsletters & offers</h4>
+            <form action="">
+                <label for="sub_email" class="form__label--hidden">Email Address</label>
+                <input type="email" id="sub_email" name="usr_email" class="form__input" placeholder="E-mail Address">
+                <a href="#">
+                    <input type="submit" class="btn--info" value="Subscribe">
+                </a>
+            </form>
+        </section>
+
+        <section class="l-footer--social">
+            <h4 class="footer__subscribe--desc">Find Us On</h4>
+
+            <a href="#" class="l-footer--social--icn">
+                <i class="fa fa-facebook-square fa-3x"></i>
+            </a><!-- facebook -->
+            <a href="#" class="l-footer--social--icn">
+                <i class="fa fa-twitter-square fa-3x"></i>
+            </a><!-- twitter -->
+            <a href="#" class="l-footer--social--icn">
+                <i class="fa fa-google-plus-square fa-3x"></i>
+            </a><!-- google-plus -->
+        </section>
+
+        <section class="grid__col--4 footer__item">
+            <h4 class="footer__item--heading">Get to Know Us</h4>
+
+            <ul class="footer__item--list">
+                <li><a href="../about.html">
+                    About Knave Inc.
+                </a>
+                </li>
+
+                <li><a href="../contact.html">
+                    Contact Us
+                </a>
+                </li>
+            </ul>
+        </section><!-- end of footer item 1 -->
+
+
+        <section class="grid__col--4 footer__item">
+            <h4 class="footer__item--heading">Wanna Work?</h4>
+
+
+            <ul class="footer__item--list">
+                <li><a href="../misc/vendors.html">Become a Knave Vendor</a>
+                </li>
+
+            </ul>
+        </section><!-- end of footer item 2 -->
+
+        <section class="grid__col--4 footer__item">
+            <h4 class="footer__item--heading">Account Services</h4>
+
+            <ul class="footer__item--list">
+                <li><a href="../accountdir/acct.html">Your Account</a>
+                </li>
+
+                <li><a href="../accountdir/trackr.html">Track an order</a>
+                </li>
+
+                <li><a href="../accountdir/sign_up.html">Sign Up</a>
+                </li>
+            </ul>
+        </section><!-- end of footer item 3 -->
+    </div>
+
+
+    <div class="footer__sec">
+        <div class="grid">
+            <span class="footer__sec--lft">
+                <small class="footer__sec--1-content">&copy;2017 Knave Inc. GmBH, Accra.</small>
+            </span>
+
+            <span class="footer__sec--rt">
+                 <small class="footer__sec--2-content">A Greyback Company</small>
+            </span>
+        </div>
+
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="../assets/javascript/jquery/jquery-3.1.1.min.js"></script>
+<script src="../assets/javascript/scripts.js"></script>
+<script src="../assets/javascript/lodash/lodash.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat, IdSelector, QualifyingElement
+/**
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * Products & Services
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+@import "utilities/mixins";
+@import "utilities/config";
+@import "utilities/functions";
+@import "utilities/helpers";
+
+.sale {
+  @include e(item) {
+    @include rem('margin-top', 72px);
+    @include rem('padding', 18px 12px);
+    @include border-radius($br);
+    height: auto;
+    background-color: palette(grey, ult-light);
+    line-height: .5;
+
+    @include m(img) {
+      @include rem('width', 120px);
+      @include rem('height', 120px);
+      @include rem('margin-right', 12px);
+      @include rem('margin-bottom', 4px);
+
+      display: inline-block;
+      float: left;
+    }
+
+    @include m(heading) {
+      @include rem('margin-bottom', 12px);
+      @include rem('font-size', 20px);
+      line-height: 1.15;
+
+      a {
+        color: $black;
+      }
+    }
+
+    @include m(content) {
+      line-height: 1.5;
+
+      .form__label {
+        display: inline;
+      }
+    }
+
+    @include m(desc) {
+      @include rem('font-size', 14px);
+      line-height: 1.5;
+    }
+
+    @include m(select) {
+      @include border-radius($br);
+      @include rem('width', 48px);
+      @include rem('margin-right', 12px);
+      @include rem('margin-left', 8px);
+      @include rem('padding', 4px);
+      margin-bottom: 0;
+      border: 0;
+      outline: 0;
+      background-color: $white;
+      color: palette(grey);
+    }
+
+    @include m(price) {
+      @include rem('font-size', 20px);
+      @include rem('margin-top', 24px);
+      @include rem('margin-bottom', 24px);
+
+      display: inline-block;
+      margin-bottom: 0;
+      float: right;
+      color: map_get($ui-colors, info);
+      font-weight: $font-weight--bold;
+    }
+
+    .grid__col--7 {
+      margin-top: 0;
+    }
+
+  }
+}
+
+// ==========================================================================
+// Miscellaneous Styles
+// ==========================================================================
+
+#tabs {
+  @include rem('margin-bottom', 72px);
+}
+
+.tab {
+  @include e(nav) {
+    @include rem('margin-bottom', 60px);
+    text-align: left;
+  }
+
+  @include e(item) {
+    @include rem('margin-right', 12px);
+    @include rem('padding', 6px 6px 0 6px);
+    @include border-radius($br);
+    display: inline-block;
+    border: 1px solid palette(grey, light);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-color: transparent;
+    outline: none;
+    background-color: palette(grey, ult-light);
+
+    @include m(title) {
+      @include rem('font-size', 18px);
+      font-weight: $font-weight--bold;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+  @include box-shadow(inner);
+  background-color: transparent;
+
+  a {
+    color: $color-primary;
+    font-weight: $font-weight--medium;
+  }
+}
+
+.btn--inline {
+  display: inline-block;
+  width: auto;
+  margin-bottom: 0;
+}
+
+// ==========================================================================
+// MEDIA QUERIES
+// ==========================================================================
+
+// SMALL
+@include media-q(small) {
+  .sale__item--purch {
+    @include rem('margin-top', 12px);
+    float: right;
+    clear: both;
+  }
+
+  // Button Inline
+}
+
+// MEDIUM
+@include media-q(medium) {
+  .btn--inline {
+    width: 30%;
+  }
+
+  .sale__item--price {
+    float: none;
+  }
+
+  .sale__item--desc {
+    @include rem('font-size', 16px);
+  }
+
+  .sale__item--img {
+    @include rem('padding', 12px);
+    @include rem('width', 240px);
+
+    height: auto;
+    margin: 0;
+    float: none;
+  }
+
+  .sale--icn {
+    display: none;
+  }
+}

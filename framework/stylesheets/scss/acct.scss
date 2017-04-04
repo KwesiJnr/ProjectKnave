@@ -1,0 +1,164 @@
+/**
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * Account Info Styles
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+@import "utilities/mixins";
+@import "utilities/config";
+@import "utilities/functions";
+@import "utilities/helpers";
+
+.list {
+  @include m(menu) { // list--menu
+    @include m(header) {
+      @include rem('margin-bottom', 36px);
+    }
+
+    @include m(heading) {
+      @include rem('font-size', 24px);
+      @include rem('padding-bottom', 36px);
+      color: $color-primary;
+      font-weight: $font-weight--bold;
+    }
+
+    @include m(current) {
+      .list--node--heading {
+        color: map_get($ui-colors, info);
+      }
+    }
+  }
+
+  @include m(node) {
+    @include m(heading) {
+      font-weight: $font-weight--bold;
+    }
+
+    @include m(child) { // list--node--child
+      margin-top: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+
+      li {
+        @include rem('margin-bottom', 12px);
+        @include rem('font-size', 14px);
+
+        display: block;
+        position: relative;
+        line-height: 12px;
+
+        a {
+          @include rem('padding-right', 8px);
+          @include rem('padding-top', 8px);
+          @include rem('padding-bottom', 8px);
+        }
+
+        &:first-child {
+          @include rem('margin-top', 6px);
+        }
+      }
+    }
+  }
+
+  @include m(content) {
+    @include rem('margin-bottom', 72px);
+
+    @include m(heading) {
+      @include rem('font-size', 36px);
+      font-weight: $font-weight--light;
+    }
+
+    @include m(title) {
+      @include rem('padding', 12px 6px);
+      @include rem('margin-bottom', 6px);
+      width: 100%;
+      border-radius: $br;
+      background-color: palette(grey, x-light);
+    }
+  }
+
+  @include m(switch) {
+    @extend %center-align;
+  }
+}
+
+// ==========================================================================
+// MEDIA QUERIES
+// ==========================================================================
+
+// SMALL
+@include media-q(small) {
+  .page-acct {
+    .panel--isolate-min {
+      border: 0;
+      background-color: transparent;
+      text-align: left;
+
+      ul {
+        display: block;
+      }
+
+      a {
+        color: palette(grey, light);
+      }
+    }
+
+    .switch-view {
+      .grid__col--3 {
+        order: 2;
+      }
+    }
+  }
+
+  // Link Disabled + ::before
+  .page-acct.link--disabled {
+    &::before {
+      @include rem('font-size', 12px);
+      content: '\f023';
+    }
+  }
+
+  // Grid-C3 of Switch View
+  .page-acct .switch-view .grid__col--3 {
+    @include rem('padding-top', 48px);
+    border-top: 1px dotted palette(grey, xx-light);
+  }
+
+  // List Menu Header
+  .list--menu--header {
+    text-align: center;
+  }
+}
+
+// MEDIUM
+@include media-q(medium) {
+  .page-acct .panel--isolate-max::before {
+    @include rem('height', 768px);
+    @include rem('left', -24px);
+  }
+  // list menu + ::before
+  .list--menu {
+    @include rem('padding-right', 36px);
+    position: relative;
+    margin-top: 0;
+  }
+
+  // list node child +  adjacent li
+  .list--node--child {
+    @include rem('padding-top', 12px);
+    @include rem('padding-bottom', 12px);
+    @include rem('margin-bottom', 24px);
+
+    li:first-child {
+      margin-top: 0;
+    }
+
+    li + li {
+      @include rem(padding-top, 6px);
+    }
+  }
+}
+
+// LARGE
+

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<!--suppress JSUnresolvedVariable -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Data -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- HTML5Shiv -->
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"
+            integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    <![endif]-->
+
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="stylesheets/css/styles.css" type="text/css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.google.com/" crossorigin>
+
+    <!-- LoadCss -->
+    <link rel="preload" href="stylesheets/css/main.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="stylesheets/css/main.css">
+    </noscript>
+    <script>
+        /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+        !function (a) {
+            "use strict";
+            var b = function (b, c, d) {
+                function e(a) {
+                    return h.body ? a() : void setTimeout(function () {
+                        e(a)
+                    })
+                }
+
+                function f() {
+                    i.addEventListener && i.removeEventListener("load", f), i.media = d || "all"
+                }
+
+                var g, h = a.document, i = h.createElement("link");
+                if (c) g = c; else {
+                    var j = (h.body || h.getElementsByTagName("head")[0]).childNodes;
+                    g = j[j.length - 1]
+                }
+                var k = h.styleSheets;
+                i.rel = "stylesheet", i.href = b, i.media = "only x", e(function () {
+                    g.parentNode.insertBefore(i, c ? g : g.nextSibling)
+                });
+                var l = function (a) {
+                    for (var b = i.href, c = k.length; c--;)if (k[c].href === b)return a();
+                    setTimeout(function () {
+                        l(a)
+                    })
+                };
+                return i.addEventListener && i.addEventListener("load", f), i.onloadcssdefined = l, l(f), i
+            };
+            "undefined" != typeof exports ? exports.loadCSS = b : a.loadCSS = b
+        }("undefined" != typeof global ? global : this);
+
+
+        /*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+        !function (a) {
+            if (a.loadCSS) {
+                var b = loadCSS.relpreload = {};
+                if (b.support = function () {
+                        try {
+                            return a.document.createElement("link").relList.supports("preload")
+                        } catch (b) {
+                            return !1
+                        }
+                    }, b.poly = function () {
+                        for (var b = a.document.getElementsByTagName("link"), c = 0; c < b.length; c++) {
+                            var d = b[c];
+                            "preload" === d.rel && "style" === d.getAttribute("as") && (a.loadCSS(d.href, d, d.getAttribute("media")), d.rel = null)
+                        }
+                    }, !b.support()) {
+                    b.poly();
+                    var c = a.setInterval(b.poly, 300);
+                    a.addEventListener && a.addEventListener("load", function () {
+                        b.poly(), a.clearInterval(c)
+                    }), a.attachEvent && a.attachEvent("onload", function () {
+                        a.clearInterval(c)
+                    })
+                }
+            }
+        }(this);
+    </script>
+    <script></script>
+
+
+    <!-- Cookie of Fonts -->
+    <script>
+        (function () {
+            if (sessionStorage.fonts) {
+                console.log("Fonts installed over last session.");
+                document.documentElement.classList.add('wf-active');
+            } else {
+                console.log("Required fonts not yet installed/cached.");
+            }
+        })();
+    </script>
+
+    <title>Knave GmBH | Home</title>
+</head>
+
+<body class="home">
+<header class="l__header--primary" id="top" role="banner">
+    <div class="grid l__header">
+        <h1 class="logo">
+            <a href="index.html" title="Knave Incorporated Home">Knave Inc.</a>
+        </h1><!-- end of logo -->
+        <a class="site-logo" href="index.html">
+            <b class="v-hidden">
+                Knave &mdash; A Greyback Company.
+            </b>
+        </a><!-- end of hidden logo -->
+
+        <ul class="btn-dashboard">
+            <li>
+                <span>Dashboard</span>
+                <i class="fa fa-angle-down"></i>
+
+                <ul class="btn-dashboard--child">
+                    <li><a href="accountdir/sign_up.html">Sign Up</a></li>
+                    <li><a href="accountdir/login.html">Log In</a></li>
+                    <li><a href="accountdir/acct.html">Account</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+        <nav class="navbar" role="navigation">
+            <h3 class="v-hidden">Main Navigation</h3>
+            <!-- toggle for mobile -->
+            <span id="toggle" class="icn--nav-toggle is-displayed-mobile">
+                    <b class="v-hidden">Toggle</b>
+                </span><!-- end of toggle for mobile -->
+
+
+            <ul class="nav is-collapsed-mobile">
+
+                <li class="nav__item nav__item--current">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav__item">
+                    <a href="pserv.html">Products & Services</a>
+                </li>
+                <li class="nav__item">
+                    <a href="blog/blog.html">Blog</a>
+                </li>
+                <li class="nav__item">
+                    <a href="about.html">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav><!-- end of nav -->
+    </div>
+</header><!-- end of Header -->
+
+
+<!-- MAIN -->
+<div class="grid">
+    <!-- Notice -->
+    <section class="notice">
+        <div class="notice--content">
+            <i class="fa fa-exclamation-triangle notice--icn"></i>
+            <span class="notice--msg">Some of the visual content (mostly images) found on this website are solely for my personal educational purposes and have no intended connection to their real-life equivalents.</span>
+        </div>
+
+    </section>
+
+
+    <section class="panel--centered hero--text">
+        <h1 class="hl__prim">Introducing <span class="hl__prim--highlight">SONY Evo<sup>&reg;</sup></span></h1>
+        <h4 class="hl__sec hl__sec--grouped">From the makers of <a href="#"><span
+                class="hl__sec--highlight">Walkman&REG;</span></a></h4>
+    </section>
+
+
+    <div class="featured__hero">
+        <figure class="img--hero">
+            <img src="assets/images/hero/sony-evo.jpg"
+                 width="808"
+                 height="388"
+                 srcset="assets/images/hero/sony-evo-1.5.jpg 1.5x"
+                 alt="A Prototype Image of the Sony EVO Device">
+            <figcaption class="featured__hero--figcaption">Image Credit: Gianni Teruzzi (http://bit.ly/2mktqbB)
+            </figcaption>
+        </figure>
+
+
+        <!-- end of hero--img -->
+
+        <div class="featured__hero--heading featured__hero--heading--grouped">
+            Price: <span class="featured__hero--price">GH¢ 1,299.99</span>
+            <span class="featured__hero--code">Evo Wireless Video Streamer (SKU: EV17EGA)</span>
+        </div>
+    </div>
+
+    <article class="featured__hero--desc">
+        <h2 class="featured__hero--heading">Product Description</h2>
+        <p>
+            Designed for the everyday home, Evo is a wireless video streaming device that takes an unconventional
+            approach to the user experience by celebrating each product touch-point in a new and exciting way.
+            Unlike other video streamers, Evo eradicates the the classic clunky USB antenna by introducing a
+            twin-shot, over-moulded, flexible TPU body.
+            <br>
+            The USB antenna beautifully nests onto the front of the device. When plugged into the computer or
+            laptop, it can also be flexed into any shape.
+        </p>
+
+        <br>
+        <p>Evo actually takes the opposite approach at dealing with cumbersome wiring – instead of hiding these
+            behind the scenes it brings them center stage and celebrates them! With the connection ports located at
+            its core, Evo creates an additional level of interactivity with an enhanced plugging and unplugging
+            experience. Designed for the everyday home, Evo is a wireless video streaming device that takes an
+            unconventional approach to the user experience by celebrating each product touch-point in a new and
+            exciting way.</p>
+    </article>
+
+    <!-- Notice -->
+
+    <section id="modal--content">
+        <header id="modal--header">
+            <button id="close" aria-label="Close Announcement Box" onclick="closeModal();">&times;</button>
+            <h3>Notice</h3>
+        </header>
+        <div id="modal--body">
+
+            <span>This site is  for my personal educational purposes only. Any products found here are fictitiously inclined and have no real connection to what may appear to be their real-life counterparts</span>
+        </div>
+    </section>
+
+
+    <section>
+        <h2 class="featured__hero--heading">Quick Pros Overview</h2>
+        <ul class="featured__hero--pros">
+            <li class="grid__col--5">
+                <ul>
+                    <li>Twin-shot flexible TPU body</li>
+                    <li>Wireless — no more clunky and nasty antennae</li>
+                    <li>Co-ordinated activity lights for better visual signal</li>
+                    <li>Plug-'n-play ability on both Windows OS (Vista onwards) and macOS seamlessly</li>
+                </ul>
+            </li>
+
+            <li class="grid__col--5">
+                <ul>
+                    <li>Rechargeable battery with 5-year guaranteed life span</li>
+                    <li>USB 3.0 (backwards compatible with USB 2.0 & USB 1.0 ports</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</div><!-- end of hero--gallery -->
+
+
+<!-- Reviews -->
+<section class="grid">
+    <h2 class="featured__hero--heading">Reviews</h2>
+
+    <!-- Review 1 -->
+    <blockquote>
+        "This is one of the best audio MI-DI devices to be released this year. I'm impressed with the audio feedback
+        I'm getting."
+
+        <cite> Kwadwo Nsiah, UpTone Systems, Accra Ghana</cite>
+    </blockquote><!-- end comment 1 -->
+
+    <!-- Review 2 -->
+    <blockquote>
+        "At Audiophile Studios&copysr;, we have moved over to KnaveHub. It is hands-down the best sound system we
+        have ever used. The customers can't have enough and just keep coming."
+
+        <cite> Jack Bryne, Atlanta, USA</cite>
+    </blockquote>
+
+    <!-- Review 3 -->
+    <blockquote>
+        "I'm a Houston-based Sound Engineer. My whole family contributes in what I do and this device pops! We live
+        in a ranch and no matter where anyone is in the house, the clarity of this sound manifests. For such a small
+        device, it has AMAZING projection! You can't go wrong with this price and output. Strongly recommend."
+
+        <cite> T. Black, Mixxx3, Johannesburg, South Africa</cite>
+    </blockquote>
+
+
+    <!-- Review 4 -->
+    <blockquote>
+        "Believe it or not, the first time I was introduced to this product, I have never been able to set it aside to
+        date."
+
+        <cite> Abraham Svelska, Penn Station, USA</cite>
+    </blockquote><!-- end comment 1 -->
+
+    <!-- Review 5 -->
+    <blockquote>
+        "All the hype is true! You only need to actually have it to fully comprehened the power of this thing. It is a
+        beast of a device. I can see many singing praises to it for years to come. Well done, Sony!"
+
+        <cite> Sven Pijecki, Aadvark Inc., Poland</cite>
+    </blockquote>
+
+    <!-- Review 6 -->
+    <blockquote>
+        "Very few audio purchases have truly impressed me for the past decade or so. I have been an audio engineer from
+        as young as age 17. Twenty years later, and I feel the Audio Industry has finally produced a true masterpiece.
+        From Home Users to Commercial, Evo is hard not to amaze."
+
+        <cite> Alan Hearth, Globacomm, United Kingdom</cite>
+    </blockquote>
+</section><!-- end of Reviews -->
+
+
+<!-- Featured -->
+
+<section class="featured panel--padded--centered">
+    <div class="grid">
+        <div class="styled__horz">
+            <span class="styled__horz--divider">
+            </span>
+            <h2 class="styled__horz--heading">Featured</h2>
+        </div>
+
+        <span class="featured--caption">Every few weeks, we showcase a number of devices from popular brands like Google, Sony, Astell & Kern, Yamaha. Find out what can professionally help you complete your next project.</span>
+        <div class="grid__col--4">
+            <section class="featured__item">
+                <a href="#">
+                    <img src="assets/images/featured/echo-dot.jpg" class="img--featured"
+                         width="360"
+                         height="312"
+                         srcset="assets/images/featured/echo-dot-1.5.jpg 1.5x"
+                         alt="Amazon Dot Echo">
+
+                    <div class="featured__item--content">
+                        <h4 class="featured__item--caption">Amazon Dot Echo</h4>
+                        <p class="featured__item--desc">Voice-controlled device with built-in
+                            speaker and Alexa&reg;</p>
+                    </div>
+                </a>
+            </section>
+        </div><!-- end of featured 1 -->
+
+        <div class="grid__col--4">
+            <section class="featured__item">
+                <a href="#">
+                    <img src="assets/images/featured/htc-vive.jpg" class="img--featured"
+                         width="360"
+                         height="312"
+                         srcset="assets/images/featured/htc-vive-1.5.jpg 1.5x"
+                         alt="HTC Vive Virtual Reality System">
+
+                    <div class="featured__item--content">
+                        <h4 class="featured__item--caption">HTC Vive - VR System</h4>
+                        <p class="featured__item--desc">Designed for better immersive, room-scale virtual reality</p>
+                    </div>
+                </a>
+            </section>
+        </div><!-- end of featured 2 -->
+
+        <div class="grid__col--4">
+            <section class="featured__item">
+                <a href="#">
+                    <img src="assets/images/featured/nexus-q.jpg" class="img--featured"
+                         width="360"
+                         height="312"
+                         srcset="assets/images/featured/nexus-q-1.5.jpg 1.5x"
+                         alt="Amazon Dot Echo">
+
+                    <div class="featured__item--content">
+                        <h4 class="featured__item--caption">Google Nexus Q</h4>
+                        <p class="featured__item--desc">Distinguishable two-pound audio sphere with 32 LEDs</p>
+                    </div>
+                </a>
+            </section>
+        </div><!-- end of featured 3 -->
+
+
+    </div><!--  end of Featured Items -->
+
+    <button class="btn-hollow">See more</button>
+</section>
+<!-- end of MAIN -->
+
+
+<!-- back to top -->
+<a href="#top">
+    <div class="return--up">Back to top
+    </div>
+</a>
+
+
+<!-- FOOTER -->
+<footer class="l-footer">
+    <div class="grid footer__prim">
+        <section class="footer__subscribe">
+            <h4 class="footer__subscribe--desc">Receive updates, newsletters & offers</h4>
+            <form action="">
+                <label for="sub_email" class="form__label--hidden">Email Address</label>
+                <input type="email" id="sub_email" name="usr_email" class="form__input" placeholder="E-mail Address">
+                <a href="#">
+                    <input type="submit" class="btn--info" value="Subscribe">
+                </a>
+            </form>
+        </section>
+
+        <section class="l-footer--social">
+            <h4 class="footer__subscribe--desc">Find Us On</h4>
+
+            <a href="#" class="l-footer--social--icn">
+                <i class="fa fa-facebook-square fa-3x"></i>
+            </a><!-- facebook -->
+            <a href="#" class="l-footer--social--icn">
+                <i class="fa fa-twitter-square fa-3x"></i>
+            </a><!-- twitter -->
+            <a href="#" class="l-footer--social--icn">
+                <i class="fa fa-google-plus-square fa-3x"></i>
+            </a><!-- google-plus -->
+        </section>
+
+        <section class="grid__col--4 footer__item">
+            <h4 class="footer__item--heading">Get to Know Us</h4>
+
+            <ul class="footer__item--list">
+                <li><a href="about.html">
+                    About Knave Inc.
+                </a>
+                </li>
+
+                <li><a href="contact.html">
+                    Contact Us
+                </a>
+                </li>
+            </ul>
+        </section><!-- end of footer item 1 -->
+
+
+        <section class="grid__col--4 footer__item">
+            <h4 class="footer__item--heading">Wanna Work?</h4>
+
+
+            <ul class="footer__item--list">
+                <li><a href="misc/vendors.html">Become a Knave Vendor</a>
+                </li>
+
+            </ul>
+        </section><!-- end of footer item 2 -->
+
+        <section class="grid__col--4 footer__item">
+            <h4 class="footer__item--heading">Account Services</h4>
+
+            <ul class="footer__item--list">
+                <li><a href="accountdir/acct.html">Your Account</a>
+                </li>
+
+                <li><a href="accountdir/trackr.html">Track an order</a>
+                </li>
+
+                <li><a href="accountdir/sign_up.html">Sign Up</a>
+                </li>
+            </ul>
+        </section><!-- end of footer item 3 -->
+    </div>
+
+
+    <div class="footer__sec">
+        <div class="grid">
+            <span class="footer__sec--lft">
+                <small class="footer__sec--1-content">&copy;2017 Knave Inc. GmBH, Accra.</small>
+            </span>
+
+            <span class="footer__sec--rt">
+                 <small class="footer__sec--2-content">A Greyback Company</small>
+            </span>
+        </div>
+
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+<!-- LoDash -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"
+        integrity="sha256-8E6QUcFg1KTnpEU8TFGhpTGHw5fJqB9vCms3OhAYLqw=" crossorigin="anonymous"></script>
+
+
+<!-- Default Scripts -->
+<script src="assets/javascript/scripts.js"></script>
+
+
+<!-- FontAwesome -->
+<script src="https://use.fontawesome.com/3eec833028.js"></script>
+
+<!-- Web Font Loader -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"
+        integrity="sha256-FL2n/ULq4lZxp5qZGW6boR09sNrvvpsQhjsFxEmcfm8=" crossorigin="anonymous"></script>
+
+<script>
+    WebFontConfig = {
+        google: {
+            families: ['Assistant:200,300,400,600,700,800', 'Ubuntu']
+        },
+        timeout: 2400,
+        // other options and settings
+        active: function () {
+            sessionStorage.fonts = true;
+        }
+    };
+
+    (function (d) {
+        var wf = d.createElement('script'), s = d.scripts[0];
+        wf.src = "https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js";
+        wf.async = true;
+        s.parentNode.insertBefore(wf, s);
+    })
+    (document);
+</script>
+
+</body>
+</html>

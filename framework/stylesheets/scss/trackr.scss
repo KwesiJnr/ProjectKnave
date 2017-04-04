@@ -1,0 +1,103 @@
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+// ==========================================================================
+// Track Styles
+// ==========================================================================
+@import "utilities/mixins";
+@import "utilities/config";
+@import "utilities/functions";
+@import "utilities/helpers";
+
+.panel__split {
+  [class^="grid__"] {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  [class^="btn--"] {
+    width: 100%;
+  }
+
+  // Remember Me Checkbox
+  .form__checkbox:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+// Overrides
+.page-trackr {
+  .panel--padded {
+    margin-top: 0;
+  }
+
+  .form {
+    background-color: transparent;
+  }
+
+  .panel--isolate-max {
+    position: relative;
+
+    @include p-el(before) {
+      position: absolute;
+      top: 0;
+      left: -20%;
+      height: 100%;
+      border-left: 1px solid palette(grey, xx-light);
+    }
+  }
+
+  .login--info {
+    @include rem('font-size', 14px);
+    display: block;
+    margin-top: 0;
+
+    a {
+      color: map_get($ui-colors, info);
+
+      &:hover {
+        opacity: .85;
+      }
+    }
+  }
+}
+
+// ==========================================================================
+// MEDIA QUERIES
+// ==========================================================================
+
+// SMALL
+@include media-q(small) {
+  .page-trackr {
+    background-color: palette(grey, ult-light);
+
+    .panel__split--caption {
+      text-decoration: underline;
+    }
+
+    .form__input {
+      @include rem('margin-bottom', 32px);
+    }
+
+    .panel__split--heading {
+      @include rem('font-size', 20px);
+    }
+
+    .panel--isolate-max {
+      @include rem('margin-top', 96px);
+    }
+  }
+
+}
+
+// MEDIUM
+@include media-q(medium) {
+  .page-trackr {
+    .panel__split {
+      [class^="btn--"] {
+        @include rem('width', 240px);
+      }
+    }
+  }
+}
+
+

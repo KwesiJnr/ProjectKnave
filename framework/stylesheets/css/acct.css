@@ -1,0 +1,168 @@
+/**
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * Account Info Styles
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+.v-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: 0;
+}
+
+.list--switch {
+    text-align: center;
+}
+
+.centered {
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.list--menu--header {
+    margin-bottom: 36px;
+    margin-bottom: 3.6rem;
+}
+
+.list--menu--heading {
+    padding-bottom: 36px;
+    padding-bottom: 3.6rem;
+    color: #dc143c;
+    font-weight: 700;
+    font-size: 24px;
+    font-size: 2.4rem;
+}
+
+.list--menu--current .list--node--heading {
+    color: #4D94FF;
+}
+
+.list--node--heading {
+    font-weight: 700;
+}
+
+.list--node--child {
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.list--node--child li {
+    position: relative;
+    display: block;
+    margin-bottom: 12px;
+    margin-bottom: 1.2rem;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 12px;
+}
+
+.list--node--child li a {
+    padding-top: 8px;
+    padding-top: 0.8rem;
+    padding-right: 8px;
+    padding-right: 0.8rem;
+    padding-bottom: 8px;
+    padding-bottom: 0.8rem;
+}
+
+.list--node--child li:first-child {
+    margin-top: 6px;
+    margin-top: 0.6rem;
+}
+
+.list--content {
+    margin-bottom: 72px;
+    margin-bottom: 7.2rem;
+}
+
+.list--content--heading {
+    font-weight: 300;
+    font-size: 36px;
+    font-size: 3.6rem;
+}
+
+.list--content--title {
+    margin-bottom: 6px;
+    margin-bottom: 0.6rem;
+    padding: 12px 6px;
+    padding: 1.2rem 0.6rem;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #d0d0cf;
+}
+
+@media (min-width: 1px) and (max-width: 888px) {
+    .page-acct .panel--isolate-min {
+        border: 0;
+        background-color: transparent;
+        text-align: left;
+    }
+
+    .page-acct .panel--isolate-min ul {
+        display: block;
+    }
+
+    .page-acct .panel--isolate-min a {
+        color: #9d9d9c;
+    }
+
+    .page-acct .switch-view .grid__col--3 {
+        order: 2;
+    }
+
+    .page-acct.link--disabled::before {
+        content: '\f023';
+        font-size: 12px;
+        font-size: 1.2rem;
+    }
+
+    .page-acct .switch-view .grid__col--3 {
+        padding-top: 48px;
+        padding-top: 4.8rem;
+        border-top: 1px dotted #dddddc;
+    }
+
+    .list--menu--header {
+        text-align: center;
+    }
+}
+
+@media (min-width: 889px) {
+    .page-acct .panel--isolate-max::before {
+        left: -24px;
+        left: -2.4rem;
+        height: 768px;
+        height: 76.8rem;
+    }
+
+    .list--menu {
+        position: relative;
+        margin-top: 0;
+        padding-right: 36px;
+        padding-right: 3.6rem;
+    }
+
+    .list--node--child {
+        margin-bottom: 24px;
+        margin-bottom: 2.4rem;
+        padding-top: 12px;
+        padding-top: 1.2rem;
+        padding-bottom: 12px;
+        padding-bottom: 1.2rem;
+    }
+
+    .list--node--child li:first-child {
+        margin-top: 0;
+    }
+
+    .list--node--child li + li {
+        padding-top: 6px;
+        padding-top: 0.6rem;
+    }
+}

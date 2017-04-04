@@ -1,0 +1,64 @@
+/**
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * #signupp Form Styles
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+@import "utilities/mixins";
+@import "utilities/config";
+@import "utilities/functions";
+@import "utilities/helpers";
+// ==========================================================================
+// Overrides
+// ==========================================================================
+
+.page-signup {
+  .notice--content {
+    background-color: $color-primary;
+  }
+}
+
+// ==========================================================================
+// MEDIA QUERIES
+// ==========================================================================
+
+// SMALL
+@include media-q(small) {
+  // Body
+  .page-signup {
+    background-color: palette(grey, ult-light);
+
+    //.form {
+    //  @include rem('padding-left', 16px);
+    //  @include rem('padding-right', 16px);
+    //}
+
+    // Header
+    .l-header {
+      @include rem('margin-bottom', 36px);
+    }
+  }
+}
+
+// MEDIUM
+@include media-q(medium) {
+  .page-signup {
+    // Form Only
+    .form {
+      @include rem('padding-left', 24px);
+      @include rem('padding-right', 24px);
+    }
+  }
+}
+
+// LARGE
+@include media-q(large) {
+  .page-signup {
+    // Form Only
+    .form {
+      @include rem('max-width', 1152px);
+      @include rem('padding-left', 120px);
+    }
+  }
+}

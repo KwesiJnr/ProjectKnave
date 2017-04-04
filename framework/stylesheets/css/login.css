@@ -1,0 +1,115 @@
+/**
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * Login Page Styles
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+.v-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: 0;
+}
+
+.centered {
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.login--info {
+    display: block;
+    margin-top: 0;
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+
+.login--info a {
+    color: #4D94FF;
+}
+
+.login--info a:hover {
+    opacity: .85;
+}
+
+.page-login .l-header {
+    margin-bottom: 48px;
+    margin-bottom: 4.8rem;
+}
+
+.page-login .form {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 16px;
+    padding-right: 1.6rem;
+    padding-left: 16px;
+    padding-left: 1.6rem;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #ececeb;
+    text-align: center;
+}
+
+.page-login .form__input {
+    background-clip: padding-box;
+    -moz-background-clip: padding;
+    -o-background-clip: padding-box;
+    -webkit-background-clip: padding;
+}
+
+.page-login .form__checkbox:last-of-type {
+    margin-bottom: 0;
+}
+
+.page-login .img--logo,
+.page-login .form__input {
+    margin-bottom: 36px;
+    margin-bottom: 3.6rem;
+}
+
+.page-login .form__input.footer__subscribe--email {
+    margin-bottom: 6px;
+    margin-bottom: 0.6rem;
+}
+
+@media (min-width: 1px) and (max-width: 888px) {
+    .page-login {
+        background-color: #ececeb;
+    }
+
+    .page-login .l-header {
+        margin-bottom: 36px;
+        margin-bottom: 3.6rem;
+    }
+
+    .page-login .form {
+        padding-top: 0;
+    }
+
+    .page-login .img--logo {
+        display: block;
+        margin-right: auto;
+        margin-bottom: 24px;
+        margin-bottom: 2.4rem;
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 889px) {
+    .page-login .form {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 1152px) {
+    .page-login .form {
+        padding-top: 24px;
+        padding-top: 2.4rem;
+        background-color: transparent;
+    }
+}

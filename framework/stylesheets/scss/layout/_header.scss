@@ -1,0 +1,119 @@
+/**
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * HEADER STYLES
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+@import "../utilities/mixins";
+@import "../utilities/config";
+@import "../utilities/functions";
+@import "../utilities/helpers";
+
+.logo {
+  float: left;
+
+  @include media-q(small) { // Mobile
+    @include rem('padding-bottom', 24px);
+    @include rem('padding-top', 24px);
+    @include rem('margin-left', 48px);
+    @include rem('font-size', 21.08px);
+    display: block;
+    margin-top: 0;
+    float: left;
+    text-align: left;
+
+    a {
+      color: $white;
+
+      &:hover {
+        color: palette(grey, light);
+      }
+    }
+  }
+
+  @include media-q(medium) {
+    @include rem('font-size', 31.77px);
+    display: none;
+  }
+
+  @include media-q(large) {
+    @include rem('font-size', 42.36px);
+  }
+}
+
+.l__header {
+  position: relative;
+
+  @include m(primary) {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    z-index: 1;
+
+    @include media-q(medium) {
+      @include rem('padding-bottom', 24px);
+    }
+  }
+}
+
+.site-logo {
+  @include img-replace('logo/knave.svg', 192px, 45px, inline-block);
+
+  @include media-q(small) {
+    display: none;
+  }
+
+  @include m(redact) {
+    @include img-replace('logo/knave-redact.svg', 192px, 45px, inline-block);
+  }
+
+  @include m(mail) {
+    @include img-replace('logo/knave-webmail.svg', 156px, 45px, inline-block);
+  }
+}
+
+.site-logo,
+.site-logo--mail,
+.site-logo--redact {
+  margin-top: 0;
+}
+
+// ==========================================================================
+// MEDIA QUERIES
+// ==========================================================================
+
+// SMALL
+@include media-q(small) {
+  // Scroll Header
+  .l__header--primary {
+    @include transition(all .4s ease);
+    position: fixed;
+    border-bottom: 1px solid map_get($ui-colors, info);
+    background-color: palette(black, dark);
+    top: 0;
+    height: auto;
+  }
+
+  .fixed {
+    top: -80px;
+  }
+
+  .default {
+    top: 0;
+  }
+
+  body {
+    @include rem('padding-top', 108px);
+  }
+}
+
+@include media-q(medium) {
+  .l__header--primary {
+    @include rem('margin-top', 24px);
+  }
+
+  .l__header--secondary {
+    //@include rem('height', 72px);
+  }
+}

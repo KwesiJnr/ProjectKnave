@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Data -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <!-- HTML5Shiv -->
+    <!--[if lt IE 9]>
+    <script src="../assets/javascript/html5shiv/html5shiv.js"></script>
+    <![endif]-->
+
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="../stylesheets/css/styles.css">
+    <link rel="stylesheet" href="../stylesheets/css/acct.css">
+    <title>Account Overview | Knave GmBH</title>
+</head>
+<body class="acct">
+
+<!-- HEADER -->
+<header class="l__header--primary" id="top" role="banner">
+    <div class="grid l__header">
+        <h1 class="logo"> <!-- takes 30%+ grid -->
+            <a class="" href="../index.html" title="Knave Incorporated Home">Knave Inc.</a>
+        </h1><!-- end of logo -->
+        <!-- logo for mobile -->
+        <a class="site-logo" href="../index.html">
+            <b class="v-hidden">
+                Knave &mdash; A Greyback Company.
+            </b>
+        </a><!-- end of mobile logo -->
+
+        <ul class="btn-dashboard">
+            <li>
+                <span class="">Account</span> <i class="fa fa-angle-down"></i>
+                <ul class="btn-dashboard--child">
+                    <li><a href="login.html">Log In</a></li>
+                    <li><a href="#orders">Orders</a></li>
+                    <li><a href="#man_acct">Management</a></li>
+                    <li><a href="#notif">Notifications</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+        <nav class="navbar" role="navigation">
+            <h3 class="v-hidden">Main Navigation</h3>
+            <!-- toggle for mobile -->
+            <span id="toggle" class="icn--nav-toggle is-displayed-mobile">
+                    <b class="v-hidden">Toggle</b>
+                </span><!-- end of toggle for mobile -->
+
+            <!-- Desktop Navigation -->
+            <ul class="nav is-collapsed-mobile">
+                <li class="nav__item">
+                    <a href="../index.html">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../pserv.html">Products & Services</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../blog/blog.html">Blog</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../about.html">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="../contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav><!-- end of nav -->
+    </div>
+</header><!-- end of Header -->
+
+
+<!-- Simulate margin from sticky header -->
+<div class="l__header--primary--support--sec"></div>
+<!-- MAIN -->
+<div class="grid switch-view panel--padded">
+    <div class="grid__col--3 panel--isolate-min">
+        <ul class="list--menu">
+            <li class="list--menu--header">
+                <div class="list--menu--heading">Account Overview</div>
+
+                <ul class="list--child">
+                    <li class="list--menu--current">
+                        <a href="acct.html" class="list--node--heading">Dashboard</a>
+                    </li>
+                </ul>
+            </li>
+
+
+            <li class="list--node">
+                <div class="list--node--heading" id="orders">Orders</div>
+                <ul class="list--node--child">
+                    <li>
+                        <a href="#" class="link--disabled">Order History</a>
+                    </li>
+                    <li>
+                        <a href="#" class="link--disabled">Digital Library</a>
+                    </li>
+                    <li>
+                        <a href="#" class="link--disabled">Return Status / History</a>
+                    </li>
+                    <li>
+                        <a href="#" class="link--disabled">Subscription Orders</a>
+                    </li>
+                </ul><!-- end of orders -->
+            </li>
+
+
+            <li class="list--node">
+                <div class="list--node--heading" id="man_acct">Manage Account</div>
+                <ul class="list--node--child">
+                    <li>
+                        <a href="#" class="link--disabled">Account Settings</a>
+                    </li>
+                    <li>
+                        <a href="#" class="link--disabled">Return Status / History</a>
+                    </li>
+                    <li>
+                        <a href="#" class="link--disabled">Subscription Orders</a>
+                    </li>
+                    <li>
+                        <a href="#" class="link--disabled">Premium Membership</a>
+                    </li>
+                    <li>
+                        <a href="#" class="link--disabled">Monsoon Store Card</a>
+                    </li>
+                </ul><!-- end of manage account-->
+            </li>
+
+
+            <li class="list--node">
+                <div class="list--node--heading" id="notif">Notifications</div>
+                <ul class="list--node--child">
+                    <li>
+                        <a href="#" class="link--disabled">Email Notifications</a>
+                    </li>
+                    <li>
+                        <a href="#" class="link--disabled">Price Alerts</a>
+                    </li>
+                    <li>
+                        <a href="#" class="link--disabled">SMS / Mobile Setup</a>
+                    </li>
+                    <li>
+                        <a href="#" class="link--disabled">Auto Notify</a>
+                    </li>
+                </ul><!-- end of manage account-->
+            </li>
+        </ul>
+    </div><!-- end of list menu -->
+
+
+    <!-- list content -->
+    <div class="grid__col--9 panel--isolate-max">
+        <section class="list--content">
+            <h2 class="list--content--heading">
+                <span class="">Your</span> Account
+            </h2>
+
+            <div class="list--content--persona">
+                <ul class="">
+                    <li class="list--content--persona-r"><span class="">Knave ID</span></li>
+                    <li class="list--content--persona-i"><span></span></li>
+                </ul>
+
+                <ul class="">
+                    <li class="list--content--persona-r"><span class="">Account Number</span></li>
+                    <li class="list--content--persona-i"><span></span></li>
+                </ul>
+
+                <ul class="">
+                    <li class="list--content--persona-r"><span class="">Address</span></li>
+                    <li class="list--content--persona-i"><span></span></li>
+                </ul>
+            </div><!-- end of list c-persona -->
+
+
+            <div>
+                <h4 class="list--content--title">Recent Order Status</h4>
+                <span class="list-content-i">No available sales order at the moment.</span>
+            </div><!-- end of order status -->
+
+            <div>
+                <h4 class="list--content--title">Recent Return Status</h4>
+                <span class="list-content-i">There is no return on this account at the moment.</span>
+            </div><!-- end of return status -->
+
+            <div>
+                <h4 class="list--content--title">Recently Purchased Products</h4>
+                <span class="list-content-i">No order has been made in the past 90 day(s).</span>
+            </div><!-- end of recent purchase -->
+        </section>
+
+
+    </div><!-- end of list content -->
+</div>
+
+
+<!-- back to top -->
+<a href="#top">
+    <div class="return--up">Back to top
+    </div>
+</a>
+
+
+<!-- FOOTER -->
+<footer class="l-footer">
+    <div class="grid footer__prim">
+        <section class="footer__subscribe">
+            <h4 class="footer__subscribe--desc">Receive updates, newsletters & offers</h4>
+            <form action="">
+                <label for="sub_email" class="form__label--hidden">Email Address</label>
+                <input type="email" id="sub_email" name="usr_email" class="form__input" placeholder="E-mail Address">
+                <a href="#">
+                    <input type="submit" class="btn--info" value="Subscribe">
+                </a>
+            </form>
+        </section>
+
+        <section class="l-footer--social">
+            <h4 class="footer__subscribe--desc">Find Us On</h4>
+
+            <a href="#" class="l-footer--social--icn">
+                <i class="fa fa-facebook-square fa-3x"></i>
+            </a><!-- facebook -->
+            <a href="#" class="l-footer--social--icn">
+                <i class="fa fa-twitter-square fa-3x"></i>
+            </a><!-- twitter -->
+            <a href="#" class="l-footer--social--icn">
+                <i class="fa fa-google-plus-square fa-3x"></i>
+            </a><!-- google-plus -->
+        </section>
+
+        <section class="grid__col--4 footer__item">
+            <h4 class="footer__item--heading">Get to Know Us</h4>
+
+            <ul class="footer__item--list">
+                <li><a href="../about.html">
+                    About Knave Inc.
+                </a>
+                </li>
+
+                <li><a href="../contact.html">
+                    Contact Us
+                </a>
+                </li>
+            </ul>
+        </section><!-- end of footer item 1 -->
+
+
+        <section class="grid__col--4 footer__item">
+            <h4 class="footer__item--heading">Wanna Work?</h4>
+
+
+            <ul class="footer__item--list">
+                <li><a href="../misc/vendors.html">Become a Knave Vendor</a>
+                </li>
+
+            </ul>
+        </section><!-- end of footer item 2 -->
+
+        <section class="grid__col--4 footer__item">
+            <h4 class="footer__item--heading">Account Services</h4>
+
+            <ul class="footer__item--list">
+                <li><a href="../accountdir/acct.html">Your Account</a>
+                </li>
+
+                <li><a href="../accountdir/trackr.html">Track an order</a>
+                </li>
+
+                <li><a href="../accountdir/sign_up.html">Sign Up</a>
+                </li>
+            </ul>
+        </section><!-- end of footer item 3 -->
+    </div>
+
+
+    <div class="footer__sec">
+        <div class="grid">
+            <span class="footer__sec--lft">
+                <small class="footer__sec--1-content">&copy;2017 Knave Inc. GmBH, Accra.</small>
+            </span>
+
+            <span class="footer__sec--rt">
+                 <small class="footer__sec--2-content">A Greyback Company</small>
+            </span>
+        </div>
+
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="../assets/javascript/jquery/jquery-3.1.1.min.js"></script>
+<script src="../assets/javascript/scripts.js"></script>
+<script src="../assets/javascript/lodash/lodash.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+// ==========================================================================
+// #Recovery Styles
+// ==========================================================================
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+@import "utilities/mixins";
+@import "utilities/config";
+@import "utilities/functions";
+@import "utilities/helpers";
+
+// Overrides
+.page-preset {
+  .form {
+    text-align: center;
+  }
+
+  .form--heading {
+    margin-bottom: 0;
+  }
+
+  .form__input {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .btn--warning {
+    i {
+      @include rem('margin-left', 6px);
+    }
+  }
+}
+
+//SMALL
+@include media-q(small) {
+  .page-preset {
+    background-color: palette(grey, ult-light);
+
+    .form__input {
+      @include rem('margin-bottom', 24px);
+    }
+  }
+}

@@ -1,0 +1,69 @@
+// ==========================================================================
+// Helpers
+// ==========================================================================
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+
+// Clearfix
+
+%clearfix {
+  &::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+// Screen reader text
+
+.v-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  border: 0;
+  overflow: hidden;
+}
+
+// Center alignment
+
+%center-align {
+  text-align: center;
+}
+
+// Left Text Align
+%align-left {
+  text-align: left;
+}
+
+// Right Text Align
+%align-right {
+  text-align: right;
+}
+
+// Float Left
+%float-left {
+  float: left;
+}
+
+// Float Right
+%float-right {
+  float: right;
+}
+
+// For Pseudo Elements
+%pseudos {
+  //display: block;
+  position: absolute;
+  content: '';
+}
+
+// Center Elements
+.centered {
+  margin-right: auto;
+  margin-left: auto;
+  float: none;
+}
+

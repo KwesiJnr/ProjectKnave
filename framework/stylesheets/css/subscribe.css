@@ -1,0 +1,56 @@
+.page-subscribe .logo {
+    display: block;
+    float: none;
+    margin: 0;
+    margin-top: 0;
+    padding-top: 24px;
+    padding-top: 2.4rem;
+    padding-bottom: 24px;
+    padding-bottom: 2.4rem;
+    text-align: center;
+    font-size: 21.08px;
+    font-size: 2.108rem;
+}
+
+.page-subscribe .logo a {
+    color: #f5f5f5;
+}
+
+.page-subscribe .logo a:hover {
+    color: #9d9d9c;
+}
+
+.page-subscribe .l__header--primary {
+    position: fixed;
+    top: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    height: auto;
+    border-bottom: 1px solid #4D94FF;
+    background-color: #1f2634;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.page-subscribe .site-logo--mail {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.page-subscribe .l-footer {
+    padding-top: 0;
+}
+
+body.page-subscribe {
+    padding-top: 108px;
+    padding-top: 10.8rem;
+}
+
+.page-subscribe .l-footer,
+.page-member .l-footer {
+    border: 0;
+    background-color: transparent;
+}

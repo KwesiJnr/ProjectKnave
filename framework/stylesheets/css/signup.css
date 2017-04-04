@@ -1,0 +1,54 @@
+/**
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * #signupp Form Styles
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+.v-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: 0;
+}
+
+.centered {
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.page-signup .notice--content {
+    background-color: #dc143c;
+}
+
+@media (min-width: 1px) and (max-width: 888px) {
+    .page-signup {
+        background-color: #ececeb;
+    }
+
+    .page-signup .l-header {
+        margin-bottom: 36px;
+        margin-bottom: 3.6rem;
+    }
+}
+
+@media (min-width: 889px) {
+    .page-signup .form {
+        padding-right: 24px;
+        padding-right: 2.4rem;
+        padding-left: 24px;
+        padding-left: 2.4rem;
+    }
+}
+
+@media (min-width: 1152px) {
+    .page-signup .form {
+        padding-left: 120px;
+        padding-left: 12rem;
+        max-width: 1152px;
+        max-width: 115.2rem;
+    }
+}

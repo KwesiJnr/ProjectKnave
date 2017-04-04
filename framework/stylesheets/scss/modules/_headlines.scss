@@ -1,0 +1,48 @@
+/**
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * Headline Style
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+@import "../utilities/mixins";
+@import "../utilities/config";
+@import "../utilities/functions";
+@import "../utilities/helpers";
+@import "../modules/index";
+
+.hl {
+  @include e(prim) {
+    @extend %hl-prim;
+    @include rem('margin', 32px 0 0);
+
+    @include m(highlight) {
+      color: $color-primary;
+      font-weight: $font-weight--light;
+    }
+  }
+
+  @include e(sec) {
+    @extend %hl-sec;
+    @extend %center-align;
+    @include rem('margin-bottom', 6px);
+
+    @include m(highlight) {
+      color: $color-secondary;
+    }
+
+    @include m(grouped) {
+      margin-top: 0;
+    }
+  }
+}
+
+.hero--text {
+  @include media-q(small) {
+    padding-top: 0;
+  }
+}
+
+// ==========================================================================
+// MEDIA QUERIES
+// ==========================================================================

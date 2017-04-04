@@ -1,0 +1,10 @@
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat
+@import 'compass';
+@import "font-awesome-sprockets";
+
+// PROXIMA NOVA proxima-nova/proximanova-bold-webfont.eot  'proxima-nova/proximanova-bold-webfont.svg',
+@include font-face('Proxima Nova', font-files('proxima-nova/proximanova-regular-webfont.eot', 'proxima-nova/proximanova-regular-webfont.svg', 'proxima-nova/proximanova-regular-webfont.woff', 'proxima-nova/proximanova-bold-webfont.ttf', 'proxima-nova/proximanova-light-webfont.eot', 'proxima-nova/proximanova-light-webfont.svg', 'proxima-nova/proximanova-light-webfont.woff', 'proxima-nova/proximanova-thin-webfont.eot', 'proxima-nova/proximanova-thin-webfont.svg', 'proxima-nova/proximanova-thin-webfont.woff', 'proxima-nova/proximanova-thin-webfont.woff2'));
+
+// EXO 2
+@include font-face('Exo 2', font-files('exo-2/exo-2.eot', 'exo-2/exo-2.svg', 'exo-2/exo-2.woff', 'exo-2/exo-2.woff2', 'exo-2/exo-2-light.ttf', 'exo-2/exo-2-light.woff', 'exo-2/exo-2-light.woff2', 'exo-2/exo-2-light-italic.ttf', 'exo-2/exo-2-light-italic.woff', 'exo-2/exo-2-light-italic.woff2', 'exo-2/exo-2-thin.ttf', 'exo-2/exo-2-thin.woff', 'exo-2/exo-2-thin.woff2'))

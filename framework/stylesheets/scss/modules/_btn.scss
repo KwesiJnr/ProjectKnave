@@ -1,0 +1,190 @@
+/**
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * #BUTTON STYLES
+ * -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ */
+// Special Commands: SCSS_LINT
+// scss-lint:disable StringQuotes, Comment, FinalNewline, NameFormat, ColorKeyword, ColorVariable, SelectorFormat, ElsePlacement, NestingDepth
+@import "../utilities/mixins";
+@import "../utilities/config";
+@import "../utilities/functions";
+@import "../utilities/helpers";
+@import "../modules/index";
+
+.btn {
+  @include btn-bg($ui-colors);
+
+  @include e(icn) {
+    border: 0;
+    background-color: transparent;
+  }
+}
+
+[class^="btn--"] {
+  @extend %center-align;
+  @extend %btn;
+  @include rem('margin-bottom', 36px);
+
+  //letter-spacing: $l-space;
+}
+
+.btn-dashboard {
+  @include rem('padding', 8px);
+  @include rem('font-size', 14px);
+  @include border-radius($br);
+  display: inline-block;
+  position: absolute;
+  width: auto;
+  border: 1px solid $color-primary;
+  background-color: transparent;
+  color: $color-primary;
+  cursor: pointer;
+  z-index: 999;
+
+  @include m(child) {
+    position: absolute;
+    left: 0;
+    border: 1px solid transparent;
+    border-bottom-left-radius: $br;
+    border-bottom-right-radius: $br;
+    visibility: hidden;
+
+    li {
+      @include rem('padding', 4px);
+      text-align: justify;
+
+      a {
+        color: $white;
+
+        &:hover {
+          opacity: .85;
+        }
+
+        &:active {
+          opacity: initial;
+        }
+      }
+    }
+  }
+
+  i {
+    @include rem('margin-left', 6px);
+  }
+
+  &:hover {
+    border: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: $color-primary;
+    color: $white;
+    opacity: .9;
+
+    .btn-dashboard--child {
+      @include rem('padding', 4px);
+
+      width: 100%;
+      border: 1px solid $color-primary;
+      background-color: opacify($color-primary, .8);
+      text-align: left;
+      visibility: visible;
+    }
+  }
+}
+
+.btn-hollow {
+  @include rem('margin-top', 48px);
+  @include rem('width', 252px);
+  @include rem('padding', 16px 24px);
+  @include border-radius($br);
+
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid $color-secondary;
+  background-color: transparent;
+  color: $color-secondary;
+  font-weight: $font-weight--bold;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-secondary;
+    color: $white;
+  }
+}
+
+// ==========================================================================
+// MEDIA QUERIES
+// ==========================================================================
+
+// SMALL
+@include media-q(small) {
+  // [class^="btn--"]
+  [class^="btn--"] {
+    width: 100%;
+  }
+
+  // Dashboard Button
+  .btn-dashboard {
+    @include rem('top', 20px);
+    @include rem('font-size', 14px);
+    @include rem('max-width', 132px);
+    @include rem('width', 120px);
+    position: absolute;
+    right: 0;
+    color: $white;
+    font-weight: $font-weight--bold;
+
+    &,
+    li {
+      text-align: center;
+    }
+  }
+}
+
+// MEDIUM
+@include media-q(medium) {
+  // [class^="btn--"]
+  [class^="btn--"] {
+    @include doubly(margin-left, 24px);
+
+    display: inline-block;
+    width: 30%;
+  }
+
+  // Dashboard Button
+  .btn-dashboard {
+    @include rem('width', 120px);
+    //@include rem('margin-top', 48px);
+    @include rem('margin-left', 8px);
+    //position: absolute;
+    //top: 0;
+    text-align: center;
+
+    li {
+      text-align: center;
+    }
+  }
+}
+
+// LARGE
+@include media-q(large) {
+  // Dashboard Button + Child a + Icon
+  .btn-dashboard {
+    @include rem('width', 144px);
+    //@include rem('padding-left', 16px);
+    @include rem('font-size', 16px);
+
+    &--child li {
+      //@include rem('padding-left', 8px);
+    }
+
+    i {
+      //@include rem('margin-left', 10px);
+    }
+  }
+
+  // [class^="btn--"]
+  [class^="btn--"] {
+    width: 26%;
+  }
+}
